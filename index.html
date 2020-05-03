@@ -13,10 +13,43 @@
     <!-- We will put our React component inside this div. -->
     <div id="like_button_container"></div>
 
+   <!-- target div for HTML created dynamically from JavaScript (React, hand-wrtten JS, etc.)   -->
+    <div id="output"></div>
+
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<!--    <script src="https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.min.js"></script>-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Can we get Babel to transpile some ES6 to browser-compatible JS? -->
+<!--    <script>-->
+<!--      var input = 'const getMessage = () => "Hello World";';-->
+<!--      var output = Babel.transform(input, { presets: ['env'] }).code;-->
+<!--      document.getElementById('output').innerHTML = output;-->
+<!--//     </script>-->
+<!--    <script>-->
+<!--      const getMessage = () => "Hello World";-->
+<!--      const output = getMessage();-->
+<!--      document.getElementById('output').innerHTML = output;-->
+<!--//     </script>-->
+
+<!--    <script type="text/babel">-->
+<!--      const queryString = 'q=query+string+parameters';-->
+<!--      const withSpaces = queryString.replaceAll('+', ' ');-->
+<!--//     </script>-->
+
+<!--    <script type="text/babel">-->
+<!--      const getMessage = () => "Hello World";-->
+<!--      document.getElementById('output').innerHTML = getMessage();-->
+<!--//     </script>-->
+
+    <!--  Success! JSX rendered from the browser! No build step!   -->
+    <script type="text/babel">
+      const myGreeting = <h2>Hello from in-browser JSX!</h2>;
+      ReactDOM.render(myGreeting, document.getElementById('output'));
+    </script>
 
     <!-- Load our React component. -->
     <script src="like_button.js"></script>
