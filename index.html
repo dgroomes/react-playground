@@ -6,21 +6,13 @@
   </head>
   <body>
 
-    <h1>react-playground</h1>
-    <h2>Learning and exploring React</h2>
-    <p>This page demonstrates using React and JSX with no build tooling.</p>
-    <p>React and Babel are loaded as a script tag. Babel transpiles the ESNext source code on-the-fly in the browser.</p>
-
-    <!-- We will put our React component inside this div. -->
-    <div id="like_button_container"></div>
-
-   <!-- target div for HTML created dynamically from JavaScript (React, hand-wrtten JS, etc.)   -->
+    <!-- These divs are the placeholders for HTML created dynamically from JavaScript (React, hand-written JS, etc.) -->
+    <div id="readme"></div>
     <div id="output1"></div>
     <div id="output2"></div>
     <div id="output3"></div>
+    <div id="like_button_container"></div>
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone@7.9.6/babel.min.js"></script>
@@ -34,5 +26,7 @@
     <script type="text/babel" src="src/jsx-playground.jsx"></script>
     <!-- Load our "LikeButton" React component. -->
     <script src="src/like-button.js"></script>
+    <script src="https://unpkg.com/marked@1.0.0/marked.min.js"></script>
+    <script type="text/babel" src="src/readme.js"></script>
   </body>
 </html>
