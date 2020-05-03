@@ -2,57 +2,44 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Add React in One Minute</title>
+    <title>react-playground</title>
   </head>
   <body>
 
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
+    <h1>react-playground</h1>
+    <h2>Learning and exploring React</h2>
+    <p>This page demonstrates using React and JSX with no build tooling.</p>
+    <p>React and Babel are loaded as a script tag. Babel transpiles the ESNext source code on-the-fly in the browser.</p>
 
     <!-- We will put our React component inside this div. -->
     <div id="like_button_container"></div>
 
    <!-- target div for HTML created dynamically from JavaScript (React, hand-wrtten JS, etc.)   -->
-    <div id="output"></div>
+    <div id="output1"></div>
     <div id="output2"></div>
+    <div id="output3"></div>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<!--    <script src="https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.min.js"></script>-->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.6/babel.min.js"></script>
 
-    <!-- Can we get Babel to transpile some ES6 to browser-compatible JS? -->
-<!--    <script>-->
-<!--      var input = 'const getMessage = () => "Hello World";';-->
-<!--      var output = Babel.transform(input, { presets: ['env'] }).code;-->
-<!--      document.getElementById('output').innerHTML = output;-->
-<!--//     </script>-->
-<!--    <script>-->
-<!--      const getMessage = () => "Hello World";-->
-<!--      const output = getMessage();-->
-<!--      document.getElementById('output').innerHTML = output;-->
-<!--//     </script>-->
+    <!-- Use Babel to transpile some ESNext source code to browser-compatible JS -->
+    <script>
+      var input = 'const getMessage = () => "Hello World";';
+      var output = Babel.transform(input, { presets: ['env'] }).code;
+      document.getElementById('output1').innerHTML = output;
+    </script>
 
-<!--    <script type="text/babel">-->
-<!--      const queryString = 'q=query+string+parameters';-->
-<!--      const withSpaces = queryString.replaceAll('+', ' ');-->
-<!--//     </script>-->
 
-<!--    <script type="text/babel">-->
-<!--      const getMessage = () => "Hello World";-->
-<!--      document.getElementById('output').innerHTML = getMessage();-->
-<!--//     </script>-->
-
-    <!--  Success! JSX rendered from the browser! No build step!   -->
+    <!-- Use Babel to *load* (and transpile) JSX source-code. We are using in-browser JSX (no build step)! -->
     <script type="text/babel">
       const myGreeting = <h2>Hello from in-browser JSX!</h2>;
-      ReactDOM.render(myGreeting, document.getElementById('output'));
+      ReactDOM.render(myGreeting, document.getElementById('output2'));
 
       const myImage = <img src="https://reactjs.org/logo-180x180.png" alt="myimage"></img>
-      ReactDOM.render(myImage, document.getElementById('output2'));
+      ReactDOM.render(myImage, document.getElementById('output3'));
     </script>
 
     <!-- Load our React component. -->
