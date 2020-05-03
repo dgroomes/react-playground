@@ -15,6 +15,7 @@
 
    <!-- target div for HTML created dynamically from JavaScript (React, hand-wrtten JS, etc.)   -->
     <div id="output"></div>
+    <div id="output2"></div>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -49,6 +50,9 @@
     <script type="text/babel">
       const myGreeting = <h2>Hello from in-browser JSX!</h2>;
       ReactDOM.render(myGreeting, document.getElementById('output'));
+
+      const myImage = <img src="https://reactjs.org/logo-180x180.png" alt="myimage"/>
+      ReactDOM.render(myImage, document.getElementById('output2'));
     </script>
 
     <!-- Load our React component. -->
