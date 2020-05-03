@@ -15,9 +15,9 @@ This project was originally scaffolded using the example project <https://reactj
 
 ### Instructions
 
-* Run a static content server
-  * Use the pre-installed Python binary and modules on macOS with `python -m SimpleHTTPServer`
-* Open the browser! (<http://localhost:8000>)
+* Run a server with `python3 serve.py`
+  * If you are on macOS, Python 3 and its built-in modules are already installed on your computer.
+* Open the browser! (<http://localhost:8080>)
 
 ### Wish List
 
