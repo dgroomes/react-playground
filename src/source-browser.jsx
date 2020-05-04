@@ -87,7 +87,7 @@ class SourceBrowser extends React.Component {
             <ul>{this.state.directoryListing.map(file => {
                 return <li><a href={file.path}>{file.name}</a></li>;
             })}</ul>
-            <div id="markdown" dangerouslySetInnerHTML={{__html: this.state.pageContent}}/>
+            <article dangerouslySetInnerHTML={{__html: this.state.pageContent}} className="markdown-body"/>
             <hr/>
         </div>;
     }
