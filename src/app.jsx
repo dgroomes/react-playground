@@ -9,11 +9,7 @@ class App extends React.PureComponent {
     render() {
         return (
             <div>
-                <div id="readme"></div>
-                <h3>Additional Content:</h3>
-                <div id="listing"></div>
-                <div id="markdown"></div>
-                <div id="output1"></div>
+                <SourceBrowser/>
                 <LikeButton/>
             </div>
         );

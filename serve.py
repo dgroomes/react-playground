@@ -1,11 +1,13 @@
 import html
 import http.server
 import io
+import json
 import os
+import re
 import sys
 import time
-import re
-import json
+import urllib
+from http import HTTPStatus
 
 # Serve content and emulate the GitHub Content API
 #
@@ -15,8 +17,6 @@ import json
 #  * https://docs.python.org/3/library/json.html
 #  * https://developer.github.com/v3/repos/contents/
 #  * https://stackoverflow.com/a/53218452
-import urllib
-from http import HTTPStatus
 
 PORT = 8080
 BIND_ADDRESS = '127.0.0.1'
