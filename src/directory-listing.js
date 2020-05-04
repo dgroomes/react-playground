@@ -27,8 +27,6 @@ let url = `${origin}/repos/${user}/${repo}/contents/`;
 fetch(url)
     .then(response => response.json())
     .then(json => {
-        console.log(json); // print
-        console.log(JSON.stringify(json, null, 4)); // pretty print
         let htmlString = '<ul>';
         for (let file of json) {
             htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;

@@ -24,7 +24,7 @@ This project was originally scaffolded using the example project <https://reactj
 
 General clean ups, TODOs and things I wish to implement for this project:
 
-* React-ify components of the `index.html` and JS source files.
+* IN PROGRESS React-ify components of the `index.html` and JS source files.
   * In other words, slim down the source code in `index.html` by pushing its contents into custom React components. For
     example, create a React component to represent the README Markdown content. We want to lean into the tools we are 
     using and get more leverage out of them.
