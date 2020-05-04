@@ -16,7 +16,8 @@ This project was originally scaffolded using the example project <https://reactj
 ### Instructions
 
 * Run a server with `python3 serve.py`
-  * If you are on macOS, Python 3 and its built-in modules are already installed on your computer.
+  * If you are on macOS then Python 3 and its built-in modules are already installed on your computer! If you are not on
+    macOS, then you may need to install Python. See <https://www.python.org/downloads/>.
 * Open the browser! (<http://localhost:8080>)
 
 ### Wish List
@@ -27,9 +28,15 @@ General clean ups, TODOs and things I wish to implement for this project:
   * In other words, slim down the source code in `index.html` by pushing its contents into custom React components. For
     example, create a React component to represent the README Markdown content. We want to lean into the tools we are 
     using and get more leverage out of them.
-* Componentize documentation across multiple Markdown files.
+* IN PROGRESS Componentize documentation across multiple Markdown files.
   * This is a challenge because dynamically rendering the contents of the Markdown source files from the repo requires 
-    some code. See this StackOverflow answer for some background: <https://stackoverflow.com/a/53218452>. 
+    some code. See this StackOverflow answer for some background: <https://stackoverflow.com/a/53218452>.
+  * DONE Emulate the Github Content API when running locally
+  * DONE Show content listing in the UI under "Additional Content"
+  * Filter items under "Additional Content" to only `.md` files and directories
+  * When `.md` files are clicked under "Additional Content", the fragment should change to that file and the content 
+    should be loaded under the "markdown" element 
+* Use `async`. It's cool (read: modern) but how do I use it?
 
 ### Links
 
