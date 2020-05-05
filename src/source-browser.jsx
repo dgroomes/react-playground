@@ -83,11 +83,15 @@ class SourceBrowser extends React.Component {
 
     render() {
         return <div>
-            <h3>Source Browser ({this.state.pageName})</h3>
-            <ul>{this.state.directoryListing.map(file => {
-                return <li><a href={file.path}>{file.name}</a></li>;
-            })}</ul>
-            <article dangerouslySetInnerHTML={{__html: this.state.pageContent}} className="markdown-body"/>
+            <div id="sidebar">
+                <h1 id="page-name">{this.state.pageName}</h1>
+                <div id="directory-listing">
+                    <ul>{this.state.directoryListing.map(file => {
+                        return <li><a href={file.path}>{file.name}</a></li>;
+                    })}</ul>
+                </div>
+            </div>
+            <div id="page-content" dangerouslySetInnerHTML={{__html: this.state.pageContent}} className="markdown-body"/>
             <hr/>
         </div>;
     }

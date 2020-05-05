@@ -43,6 +43,20 @@ class GitHubContentApiEmulationHandler(http.server.SimpleHTTPRequestHandler):
         else:
             http.server.SimpleHTTPRequestHandler.do_GET(self)
 
+    def send_no_cache_headers(self):
+
+        """
+        Send Headers to signal that the client should *not* cache this request. This is useful for local development
+        when we don't want to cache, for example, the CSS files while we are rapidly prototyping.
+
+        Gotten from the excellent suggestion https://stackoverflow.com/a/25708957
+        """
+
+
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
+
     def github_content(self, resource):
         path = self.translate_path(resource)
         f = None
@@ -96,6 +110,7 @@ class GitHubContentApiEmulationHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-Type", "application/json; charset=%s" % enc)
         self.send_header("Content-Length", str(len(encoded)))
+        self.send_no_cache_headers()
         self.end_headers()
         return f
 

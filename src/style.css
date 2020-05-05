@@ -2,13 +2,29 @@
 .markdown-body {
     box-sizing: border-box;
     min-width: 200px;
-    max-width: 980px;
     margin: 0 auto;
     padding: 45px;
 }
 
-@media (max-width: 767px) {
-    .markdown-body {
-        padding: 15px;
-    }
+#page-name {
+    background-color: aliceblue;
+}
+
+#directory-listing {
+    background-color: mistyrose;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    border-width: 0 2px 0 0;
+    border-style: solid;
+    border-color: lightgray;
+    width: 25em;
+    margin-left: -27em;
+    padding-left: 27em;
+}
+
+#page-content {
+    padding-left: 27em;
 }
