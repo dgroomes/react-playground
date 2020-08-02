@@ -24,6 +24,8 @@ class SourceBrowser extends React.Component {
     /**
      * Use the GitHub API to list the contents of the repo in a directory listing format.
      * See https://stackoverflow.com/a/53218452
+     *
+     * And filter for only Markdown files (i.e. files ending in ".md")
      */
     loadDirectoryListing() {
         let user = 'dgroomes';
@@ -39,7 +41,8 @@ class SourceBrowser extends React.Component {
                 //     htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
                 // }
                 // htmlString += '</ul>';
-                this.setState({directoryListing: json})
+                let dirListingMdFiles = json.filter(file => /.+\.md$/.test(file.name))
+                this.setState({directoryListing: dirListingMdFiles})
             });
     }
 
