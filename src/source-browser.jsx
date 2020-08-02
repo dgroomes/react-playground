@@ -25,6 +25,8 @@ class SourceBrowser extends React.Component {
      * See https://stackoverflow.com/a/53218452
      *
      * And filter for only Markdown files (i.e. files ending in ".md")
+     *
+     * @return Promise which resolves to the directory listing files
      */
     loadDirectoryListing() {
         let user = 'dgroomes';
@@ -32,11 +34,12 @@ class SourceBrowser extends React.Component {
         let origin = this.githubApiOrigin()
         let url = `${origin}/repos/${user}/${repo}/contents/`;
 
-        fetch(url)
+        return fetch(url)
             .then(response => response.json())
             .then(json => {
                 let dirListingMdFiles = json.filter(file => /.+\.md$/.test(file.name))
                 this.setState({directoryListing: dirListingMdFiles})
+                return dirListingMdFiles;
             });
     }
 
@@ -84,16 +87,23 @@ class SourceBrowser extends React.Component {
      * In particular, the initialization stuff includes:
      *   * Load the directory listing
      *   * Register a hash change event handler to handle navigation
-     *   * Load the "README.md" page by default because, by convention, "README.md" is the most relevant starting place
+     *
+     * There is a *second phase* of initialization that kicks off after directory listing is loaded. This phase loads
+     * a default file from the listing and renders its content on the page.
      */
     componentDidMount() {
-        this.loadDirectoryListing();
+        this.loadDirectoryListing().then(dirListingFiles => {
+            let length = dirListingFiles.length;
+            console.debug(`Directory listing loaded with ${length} files`);
+            let defaultPage = dirListingFiles[0];
+            console.debug(`Initializing the first page in the list: ${JSON.stringify(defaultPage.name, null, 4)}`)
+            this.loadPage(defaultPage.name);
+        });
         window.onhashchange = (ev => {
             console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);
             let targetDocument = location.hash.substring(1); // remove the leading #
             this.loadPage(targetDocument);
         });
-        this.loadPage('README.md');
     }
 
     render() {
