@@ -32,10 +32,12 @@ General clean ups, TODOs and things I wish to implement for this project:
   * DONE Filter items under "Additional Content" to only `.md` files and directories
   * DONE When `.md` files are clicked under "Additional Content", the fragment should change to that file and the content 
     should be loaded under the "markdown" element 
-  * IN PROGRESS On initial page load, a default page should be in the hash (for example, "README.md"). This is 
+  * DONE On initial page load, a default page should be in the hash (for example, "README.md"). This is 
     symmetrical to how the navigation works where when you navigate to another document (e.g. CHANGELOG.md) then the 
     hash is updated with that document. The default page should not be an exception to the "location hash based"-routing
     strategy  
+  * (defect) Navigating the browser directly to a hash like <http://localhost:8080/#CHANGELOG.md> will cause "please wait!"
+    to never go away in the directy listing and the page content.
   * The default page should be the README page (identified by anything like "README", "readme", "readme.md", etc.) 
     because, by convention, a README is the most relevant starting place when viewing a codebase.
 * Use `async`. It's cool (read: modern) but how do I use it?

@@ -96,12 +96,12 @@ class SourceBrowser extends React.Component {
             let length = dirListingFiles.length;
             console.debug(`Directory listing loaded with ${length} files`);
             let defaultPage = dirListingFiles[0];
-            console.debug(`Initializing the first page in the list: ${JSON.stringify(defaultPage.name, null, 4)}`)
-            this.loadPage(defaultPage.name);
+            console.debug(`Navigating to the first page in the list: ${JSON.stringify(defaultPage.name, null, 4)}`)
+            window.location.hash = defaultPage.name;
         });
         window.onhashchange = (ev => {
             console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);
-            let targetDocument = location.hash.substring(1); // remove the leading #
+            let targetDocument = window.location.hash.substring(1); // remove the leading #
             this.loadPage(targetDocument);
         });
     }
