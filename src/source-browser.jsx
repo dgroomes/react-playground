@@ -29,8 +29,8 @@ class SourceBrowser extends React.Component {
      * @return Promise which resolves to the directory listing files
      */
     loadDirectoryListing() {
-        let user = 'dgroomes';
-        let repo = 'react-playground';
+        let user = window.config.user;
+        let repo = window.config.repo;
         let origin = this.githubApiOrigin()
         let url = `${origin}/repos/${user}/${repo}/contents/`;
 
@@ -39,6 +39,7 @@ class SourceBrowser extends React.Component {
             .then(json => {
                 let dirListingMdFiles = json.filter(file => /.+\.md$/.test(file.name))
                 this.setState({directoryListing: dirListingMdFiles})
+                console.debug(`Directory listing loaded with ${dirListingMdFiles.length} files after filtering`);
                 return dirListingMdFiles;
             });
     }
@@ -93,11 +94,17 @@ class SourceBrowser extends React.Component {
      */
     componentDidMount() {
         this.loadDirectoryListing().then(dirListingFiles => {
-            let length = dirListingFiles.length;
-            console.debug(`Directory listing loaded with ${length} files`);
-            let defaultPage = dirListingFiles[0];
-            console.debug(`Navigating to the first page in the list: ${JSON.stringify(defaultPage.name, null, 4)}`)
-            window.location.hash = defaultPage.name;
+            let foundDefaultPage = dirListingFiles.some(file => file.name === window.config.defaultPage);
+            let defaultPage;
+            if (foundDefaultPage) {
+                defaultPage = window.config.defaultPage
+            } else {
+                let firstPage = dirListingFiles[0]
+                console.debug(`Did not find the configured defaultPage '${window.config.defaultPage}'. Falling back to using the first page in the directory listing ${JSON.stringify(firstPage, null, 4)}`)
+                defaultPage = firstPage.name;
+            }
+            console.debug(`Navigating to the default page ${defaultPage}`)
+            window.location.hash = defaultPage;
         });
         window.onhashchange = (ev => {
             console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);

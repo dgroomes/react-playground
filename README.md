@@ -37,8 +37,9 @@ General clean ups, TODOs and things I wish to implement for this project:
     hash is updated with that document. The default page should not be an exception to the "location hash based"-routing
     strategy  
   * (defect) Navigating the browser directly to a hash like <http://localhost:8080/#CHANGELOG.md> will cause "please wait!"
-    to never go away in the directy listing and the page content.
-  * The default page should be the README page (identified by anything like "README", "readme", "readme.md", etc.) 
+    to never go away in the directory listing and the page content.
+  * DONE The default page should be configurable (e.g. "README.md") with fall-back to the first page in the directory 
+    listing 
     because, by convention, a README is the most relevant starting place when viewing a codebase.
 * Use `async`. It's cool (read: modern) but how do I use it?
 * Use JS imports so I dont' have to include every JS file by hand in `index.html`
