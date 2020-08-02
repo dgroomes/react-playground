@@ -30,8 +30,11 @@ General clean ups, TODOs and things I wish to implement for this project:
   * DONE Emulate the Github Content API when running locally
   * DONE Show content listing in the UI under "Additional Content"
   * DONE Filter items under "Additional Content" to only `.md` files and directories
-  * When `.md` files are clicked under "Additional Content", the fragment should change to that file and the content 
+  * DONE When `.md` files are clicked under "Additional Content", the fragment should change to that file and the content 
     should be loaded under the "markdown" element 
+  * On initial page load, "README.md" should be in the hash. This is symmetrical to how the navigation works where when
+    you navigate to another document (e.g. CHANGELOG.md) then the hash is updated with that document. README.md should
+    not be an exception to the "location hash based"-routing strategy  
 * Use `async`. It's cool (read: modern) but how do I use it?
 * Use JS imports so I dont' have to include every JS file by hand in `index.html`
 * Implement loading spinners? Use Suspense <https://reactjs.org/docs/concurrent-mode-suspense.html>?

@@ -36,11 +36,6 @@ class SourceBrowser extends React.Component {
         fetch(url)
             .then(response => response.json())
             .then(json => {
-                // let htmlString = '<ul>';
-                // for (let file of json) {
-                //     htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-                // }
-                // htmlString += '</ul>';
                 let dirListingMdFiles = json.filter(file => /.+\.md$/.test(file.name))
                 this.setState({directoryListing: dirListingMdFiles})
             });
@@ -79,8 +74,26 @@ class SourceBrowser extends React.Component {
             });
     }
 
+    /**
+     * "User-mode" initialization stuff. I don't totally follow the React lifecycle but I think this is the right place
+     * to do initialization stuff for application code because this function is called *after* the React initialization
+     * stuff is done (I think...).
+     *
+     * In other words, this function is for "user"(or, "application")-level initialization stuff which can happen after
+     * the "system"(or, "React")-level initialization stuff has happened. That's my mental model at least.
+     *
+     * In particular, the initialization stuff includes:
+     *   * Load the directory listing
+     *   * Register a hash change event handler to handle navigation
+     *   * Load the "README.md" page by default because, by convention, "README.md" is the most relevant starting place
+     */
     componentDidMount() {
-        this.loadDirectoryListing()
+        this.loadDirectoryListing();
+        window.onhashchange = (ev => {
+            console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);
+            let targetDocument = location.hash.substring(1); // remove the leading #
+            this.loadPage(targetDocument);
+        });
         this.loadPage('README.md');
     }
 
@@ -90,7 +103,7 @@ class SourceBrowser extends React.Component {
                 <h1 id="page-name">{this.state.pageName}</h1>
                 <div id="directory-listing">
                     <ul>{this.state.directoryListing.map(file => {
-                        return <li><a href={file.path}>{file.name}</a></li>;
+                        return <li><a href={"#" + file.path}>{file.name}</a></li>;
                     })}</ul>
                 </div>
             </div>
