@@ -108,7 +108,7 @@ class SourceBrowser extends React.Component {
         });
         window.onhashchange = (ev => {
             console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);
-            let targetDocument = window.location.hash.substring(1); // remove the leading #
+            let targetDocument = window.location.hash.substring(1); // remove the leading '#'
             this.loadPage(targetDocument);
         });
     }
@@ -119,7 +119,9 @@ class SourceBrowser extends React.Component {
                 <h1 id="page-name">{this.state.pageName}</h1>
                 <div id="directory-listing">
                     <ul>{this.state.directoryListing.map(file => {
-                        return <li><a href={"#" + file.path}>{file.name}</a></li>;
+                        // NOTE: React really wants list items to have a key. So, assigning 'path' to the key because it
+                        // is a unique identifier (rather, a key!).
+                        return <li key={file.path}><a href={"#" + file.path}>{file.name}</a></li>;
                     })}</ul>
                 </div>
             </div>
