@@ -29,7 +29,7 @@ General clean ups, TODOs and things I wish to implement for this project:
     some code. See this StackOverflow answer for some background: <https://stackoverflow.com/a/53218452>.
   * DONE Emulate the Github Content API when running locally
   * DONE Show content listing in the UI under "Additional Content"
-  * Filter items under "Additional Content" to only `.md` files and directories
+  * IN PROGRESS Filter items under "Additional Content" to only `.md` files and directories
   * When `.md` files are clicked under "Additional Content", the fragment should change to that file and the content 
     should be loaded under the "markdown" element 
 * Use `async`. It's cool (read: modern) but how do I use it?

@@ -91,6 +91,7 @@ class SourceBrowser extends React.Component {
                     })}</ul>
                 </div>
             </div>
+            {/* Danger! "dangerousSetInnerHTML" */}
             <div id="page-content" dangerouslySetInnerHTML={{__html: this.state.pageContent}} className="markdown-body"/>
             <hr/>
         </div>;
