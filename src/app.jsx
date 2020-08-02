@@ -10,7 +10,6 @@ class App extends React.PureComponent {
         return (
             <div>
                 <SourceBrowser/>
-                <LikeButton/>
             </div>
         );
     }

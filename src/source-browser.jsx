@@ -1,9 +1,8 @@
 /**
- * NOT YET FULLY IMPLEMENTED
+ * A content browser for the source code in the GitHub repository.
  *
- * A content browser for the source code in the GitHub repository
- *
- * TODO: implement the ability to actually click into other source files.
+ * Shows a directory listing on the left-hand side of the page that includes all ".md" files in the git repo. The files
+ * can be navigated to by clicking on them. The contents of the currently opened shows on the right-hand side.
  */
 class SourceBrowser extends React.Component {
 
