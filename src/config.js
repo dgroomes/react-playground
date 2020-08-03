@@ -7,5 +7,6 @@
 window.config = {
     user: "dgroomes",
     repo: "react-playground",
-    defaultPage: "README.md"
+    defaultPage: "README.md",
+    loadingMessage: "Please, please wait!"
 }

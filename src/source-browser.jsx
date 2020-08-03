@@ -9,8 +9,8 @@ class SourceBrowser extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageName: 'please wait!',
-            pageContent: 'please wait!',
+            pageName: window.config.loadingMessage,
+            pageContent: window.config.loadingMessage,
             directoryListing: []
         };
         // According to https://reactjs.org/docs/handling-events.html
