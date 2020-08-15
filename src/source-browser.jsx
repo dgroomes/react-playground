@@ -17,7 +17,7 @@ class SourceBrowser extends React.Component {
         //     "This binding is necessary to make `this` work in the callback"
         //
         // But why? And what is the idiomatic alternative (with hooks and without hooks)?
-        this.loadPage = this.loadPage.bind(this);
+        this.loadDocument = this.loadDocument.bind(this);
     }
 
     /**
@@ -68,7 +68,7 @@ class SourceBrowser extends React.Component {
      *  2. Convert the Markdown source to HTML using marked.js
      *  3. Add the HTML to the SourceBrowser component
      */
-    loadPage(pageName) {
+    loadDocument(pageName) {
         fetch(pageName)
             .then(response => response.text())
             .then(markown => {
@@ -89,27 +89,46 @@ class SourceBrowser extends React.Component {
      *   * Load the directory listing
      *   * Register a hash change event handler to handle navigation
      *
-     * There is a *second phase* of initialization that kicks off after directory listing is loaded. This phase loads
-     * a default file from the listing and renders its content on the page.
+     * There is a *second phase* of initialization that kicks off after the directory listing is loaded. This phase
+     * determines the actual document that will be rendered on the page (a so-called "confirmed document") based on a
+     * combination of the URL hash (if it exists), a hard-coded "default document" and the directory listing. It loads the
+     * "confirmed document" and renders its content on the page.
      */
     componentDidMount() {
-        this.loadDirectoryListing().then(dirListingFiles => {
-            let foundDefaultPage = dirListingFiles.some(file => file.name === window.config.defaultPage);
-            let defaultPage;
-            if (foundDefaultPage) {
-                defaultPage = window.config.defaultPage
+        let promise = this.loadDirectoryListing();
+
+        let targetDocument;
+        if (window.location.hash === "") {
+            console.debug(`On initial page load, found that no specific target document was requested in the URL hash. Will navigate to the 'default page' ${window.config.defaultPage}`);
+            targetDocument = window.config.defaultPage;
+        } else {
+            console.debug(`On initial page load, found that the hash was non-empty: ${window.location.hash}. Will try to navigate to it.`);
+            targetDocument = window.location.hash.substring(1); // remove the leading '#'
+        }
+
+        promise.then(dirListingFiles => {
+            let foundTargetDocument = dirListingFiles.some(file => file.name === targetDocument);
+            let confirmedDocument;
+            if (foundTargetDocument) {
+                confirmedDocument = targetDocument;
             } else {
-                let firstPage = dirListingFiles[0]
-                console.debug(`Did not find the configured defaultPage '${window.config.defaultPage}'. Falling back to using the first page in the directory listing ${JSON.stringify(firstPage, null, 4)}`)
-                defaultPage = firstPage.name;
+                let firstDocument = dirListingFiles[0]
+                console.debug(`Did not find the target/request document '${targetDocument}'. Falling back to using the first document found in the directory listing ${JSON.stringify(firstDocument, null, 4)}`)
+                confirmedDocument = firstDocument.name;
             }
-            console.debug(`Navigating to the default page ${defaultPage}`)
-            window.location.hash = defaultPage;
+            console.debug(`Loading document: '${confirmedDocument}'`)
+            let currentUrlHashValue = window.location.hash.substring(1); // remove the leading '#'
+            if (currentUrlHashValue === confirmedDocument) {
+                console.debug(`Found that the URL hash value ('${currentUrlHashValue}') is already equal to the 'confirmed document' ('${confirmedDocument}'). Will *not* change the hash but instead will the document.`);
+                this.loadDocument(confirmedDocument)
+            } else { // When we need to load a default page
+                window.location.hash = confirmedDocument;
+            }
         });
         window.onhashchange = (ev => {
             console.log(`[SourceBrowser] Hash change event detected. newUrl=${ev.newURL}`);
             let targetDocument = window.location.hash.substring(1); // remove the leading '#'
-            this.loadPage(targetDocument);
+            this.loadDocument(targetDocument);
         });
     }
 
