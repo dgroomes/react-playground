@@ -25,6 +25,9 @@ General clean ups, TODOs and things I wish to implement for this project:
 * Implement loading spinners? Use Suspense <https://reactjs.org/docs/concurrent-mode-suspense.html>?
 * Breakdown the `SourceBrowser` component into a combination of a `DirectoryListing` and a `Markdown` component
 * Use consistent language on "page" (i.e. web page) vs "document" (e.g. "wish-list.md", "README.md")
-* (defect) When the URL hash is manually edited to a document that does not actually exist, it still fires off the GET
+* DONE (defect) When the URL hash is manually edited to a document that does not actually exist, it still fires off the GET
   request to the GitHub API and will load the error response into the page. Instead, there should be error handling and
   show a nicer "Not found" message.
+* Cache the document in the browser.
+  * Use http headers and cache between page reloads/visits? Or just cache for the same session and accommodate loading
+    from the cache when flipping between documents via URL hash changes?  

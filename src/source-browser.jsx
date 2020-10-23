@@ -2,7 +2,7 @@
  * A content browser for the source code in the GitHub repository.
  *
  * Shows a directory listing on the left-hand side of the page that includes all ".md" files in the git repo. The files
- * can be navigated to by clicking on them. The contents of the currently opened shows on the right-hand side.
+ * can be navigated to by clicking on them. The contents of the currently opened file shows on the right-hand side.
  */
 class SourceBrowser extends React.Component {
 
@@ -63,18 +63,31 @@ class SourceBrowser extends React.Component {
     }
 
     /**
-     * Load a page:
-     *  1. Load the page source file from the root of the repo
-     *  2. Convert the Markdown source to HTML using marked.js
-     *  3. Add the HTML to the SourceBrowser component
+     * Load a document:
+     *  1. Load the document source file from the root of the repo
+     *  2. Handle unsuccessful responses
+     *  3. Convert the Markdown source to HTML using marked.js
+     *  4. Add the HTML to the SourceBrowser component
      */
-    loadDocument(pageName) {
-        fetch(pageName)
-            .then(response => response.text())
+    loadDocument(documentName) {
+        fetch(documentName)
+            .then(response => {
+                if (response.status === 404) {
+                    return `(404) Document '${documentName}' was not found`
+                } else if (!response.ok) {
+                    throw new Error(`Network response was not okay. status=${status}`)
+                } else {
+                    return response.text();
+                }
+            })
             .then(markown => {
                 let html = marked(markown);
-                this.setState({pageName, pageContent: html})
-            });
+                this.setState({ pageName: documentName, pageContent: html})
+            })
+            .catch(err => {
+                this.setState({ pageName: documentName, pageContent: "❌ Something went wrong. Failed to load document." })
+            })
+        ;
     }
 
     /**
@@ -107,22 +120,12 @@ class SourceBrowser extends React.Component {
         }
 
         promise.then(dirListingFiles => {
-            let foundTargetDocument = dirListingFiles.some(file => file.name === targetDocument);
-            let confirmedDocument;
-            if (foundTargetDocument) {
-                confirmedDocument = targetDocument;
-            } else {
-                let firstDocument = dirListingFiles[0]
-                console.debug(`Did not find the target/request document '${targetDocument}'. Falling back to using the first document found in the directory listing ${JSON.stringify(firstDocument, null, 4)}`)
-                confirmedDocument = firstDocument.name;
-            }
-            console.debug(`Loading document: '${confirmedDocument}'`)
             let currentUrlHashValue = window.location.hash.substring(1); // remove the leading '#'
-            if (currentUrlHashValue === confirmedDocument) {
-                console.debug(`Found that the URL hash value ('${currentUrlHashValue}') is already equal to the 'confirmed document' ('${confirmedDocument}'). Will *not* change the hash but instead will the document.`);
-                this.loadDocument(confirmedDocument)
+            if (currentUrlHashValue === targetDocument) {
+                console.debug(`Found that the URL hash value ('${currentUrlHashValue}') is already equal to the 'target document' ('${targetDocument}'). Will *not* change the hash but instead will the document.`);
+                this.loadDocument(targetDocument)
             } else { // When we need to load a default page
-                window.location.hash = confirmedDocument;
+                window.location.hash = targetDocument;
             }
         });
         window.onhashchange = (ev => {
@@ -144,7 +147,7 @@ class SourceBrowser extends React.Component {
                     })}</ul>
                 </div>
             </div>
-            {/* Danger! "dangerousSetInnerHTML" */}
+            {/* Danger! "dangerouslySetInnerHTML" */}
             <div id="page-content" dangerouslySetInnerHTML={{__html: this.state.pageContent}} className="markdown-body"/>
             <hr/>
         </div>;

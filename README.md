@@ -1,6 +1,6 @@
 # react-playground
 
-Learning and exploring React <https://reactjs.org/>.
+📚 Learning and exploring React <https://reactjs.org/>.
 
 * Project source: <https://github.com/dgroomes/react-playground>
 * GitHub Pages page: <https://dgroomes.github.io/react-playground/>
