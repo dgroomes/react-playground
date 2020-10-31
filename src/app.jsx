@@ -9,6 +9,7 @@ class App extends React.PureComponent {
     render() {
         return (
             <div>
+                <HelloHeader/>
                 <SourceBrowser/>
             </div>
         );
