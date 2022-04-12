@@ -11,7 +11,7 @@
 [This repository](https://github.com/dgroomes/react-playground) is for my own personal use as I learn React. It implements
 a React project that features JSX, Markdown and **zero build tooling**. It's hosted in [GitHub pages](https://dgroomes.github.io/react-playground/).
 
-React, Babel and Marked.js are loaded as script tags. Babel transpiles the ESNext source code on-the-fly in the browser. Likewise, Marked.js compiles the source
+React, Babel and Marked are loaded as script tags. Babel transpiles the ESNext source code on-the-fly in the browser. Likewise, Marked compiles the source
 Markdown files into HTML on-the-fly in the browser.
 
 This project was originally scaffolded using the example project <https://reactjs.org/docs/add-react-to-a-website.html>. 
@@ -31,4 +31,4 @@ Follow these instructions to serve the app (rejoice in the fact that there's no 
 
 * React <https://reactjs.org/> *A JavaScript library for building user interfaces*
 * Babel <https://babeljs.io/> *The compiler for next generation JavaScript*
-* Marked.js <https://marked.js.org/> *A markdown parser and compiler. Built for speed.*
+* Marked <https://marked.js.org/> *A markdown parser and compiler. Built for speed.*
