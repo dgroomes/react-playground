@@ -31,3 +31,4 @@ General clean ups, TODOs and things I wish to implement for this project:
 * Cache the document in the browser.
   * Use http headers and cache between page reloads/visits? Or just cache for the same session and accommodate loading
     from the cache when flipping between documents via URL hash changes?  
+* Defect. `Hello from the <HelloHeader> element!` text is showing up and is a visual defect. 
