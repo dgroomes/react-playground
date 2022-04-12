@@ -6,29 +6,43 @@
 > 
 > --<cite>https://reactjs.org/</cite>
 
-## Description
+**NOTE**: This was developed on macOS and for my own personal use.
 
-[This repository](https://github.com/dgroomes/react-playground) is for my own personal use as I learn React. It implements
-a React project that features JSX, Markdown and **zero build tooling**. It's hosted in [GitHub pages](https://dgroomes.github.io/react-playground/).
+## Standalone sub-projects
 
-React, Babel and Marked are loaded as script tags. Babel transpiles the ESNext source code on-the-fly in the browser. Likewise, Marked compiles the source
-Markdown files into HTML on-the-fly in the browser.
+This repository illustrates different concepts, patterns and examples via standalone sub-projects. Each sub-project is
+completely independent of the others and do not depend on the root project. This _standalone sub-project constraint_
+forces the sub-projects to be complete and maximizes the reader's chances of successfully running, understanding, and
+re-using the code.
 
-This project was originally scaffolded using the example project <https://reactjs.org/docs/add-react-to-a-website.html>. 
+The sub-projects include:
 
-## Instructions
+## `babel-standalone/`
 
-Follow these instructions to serve the app (rejoice in the fact that there's no build step!):
+A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
 
-1. Serve the source code:
-   * `python3 serve.py`
-   * Note: If you are on macOS then Python 3 and its built-in modules are already installed on your computer! If you are not on
-     macOS, then you may need to install Python. See <https://www.python.org/downloads/>.
-2. Open the browser!
-   * Open <http://localhost:8080> in your browser
+See the README in [babel-standalone/](babel-standalone/).
 
-## Reference
+## `vite/`
 
-* React <https://reactjs.org/> *A JavaScript library for building user interfaces*
-* Babel <https://babeljs.io/> *The compiler for next generation JavaScript*
-* Marked <https://marked.js.org/> *A markdown parser and compiler. Built for speed.*
+NOT YET IMPLEMENTED
+
+A React project built with [Vite](https://vitejs.dev/)
+
+See the README in [vite/](vite/).
+
+## `webpack`
+
+NOT YET IMPLEMENTED
+
+A React project built with [webpack](https://webpack.js.org/)
+
+See the README in [webpack/](webpack/).
+
+## `esbuild`
+
+NOT YET IMPLEMENTED
+
+A React project built with [esbuild](https://esbuild.github.io/)
+
+See the README in [esbuild/](esbuild/).
