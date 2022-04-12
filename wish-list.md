@@ -2,7 +2,7 @@
 
 General clean ups, TODOs and things I wish to implement for this project:
 
-* DONE Componentize documentation across multiple Markdown files.
+* [x] DONE Componentize documentation across multiple Markdown files.
   * This is a challenge because dynamically rendering the contents of the Markdown source files from the repo requires 
     some code. See this StackOverflow answer for some background: <https://stackoverflow.com/a/53218452>.
   * DONE Emulate the Github Content API when running locally
@@ -25,13 +25,13 @@ General clean ups, TODOs and things I wish to implement for this project:
 * Implement loading spinners? Use Suspense <https://reactjs.org/docs/concurrent-mode-suspense.html>?
 * Breakdown the `SourceBrowser` component into a combination of a `DirectoryListing` and a `Markdown` component
 * Use consistent language on "page" (i.e. web page) vs "document" (e.g. "wish-list.md", "README.md")
-* DONE (defect) When the URL hash is manually edited to a document that does not actually exist, it still fires off the GET
+* [x] DONE (defect) When the URL hash is manually edited to a document that does not actually exist, it still fires off the GET
   request to the GitHub API and will load the error response into the page. Instead, there should be error handling and
   show a nicer "Not found" message.
 * Cache the document in the browser.
   * Use http headers and cache between page reloads/visits? Or just cache for the same session and accommodate loading
     from the cache when flipping between documents via URL hash changes?  
-* Defect. `Hello from the <HelloHeader> element!` text is showing up and is a visual defect. 
+* [x] DONE (I just deleted it. I think I only added it to learn how to de-React this app but it's not an interesting component) Defect. `Hello from the <HelloHeader> element!` text is showing up and is a visual defect. 
 * React 18 defect. With React 18, it complains when you don't use ReactDOM from the *client* but that doesn't seem to be
   possible. Even React's own CDN-based example has this error: <https://raw.githubusercontent.com/reactjs/reactjs.org/main/static/html/single-file-example.html>.
   See the defect described in [this StackOverflow question](https://stackoverflow.com/q/71696487).
