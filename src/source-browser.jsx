@@ -81,11 +81,12 @@ class SourceBrowser extends React.Component {
                 }
             })
             .then(markown => {
-                let html = marked(markown);
+                let html = marked.parse(markown);
                 this.setState({ pageName: documentName, pageContent: html})
             })
             .catch(err => {
                 this.setState({ pageName: documentName, pageContent: "❌ Something went wrong. Failed to load document." })
+                console.error({err})
             })
         ;
     }
