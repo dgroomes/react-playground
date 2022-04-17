@@ -25,6 +25,8 @@ General clean ups, todos and things I wish to implement for this project:
 * Get the tsconfig.json right. I need to use the React preset, or whatever.
 * What is the idiomatic way to do CSS in React? Do you just import the "styles.css" file? Is there not really a react
   way to do it? Do you somehow scope the CSS to the React element, like you would with web components?
+* What's the deal with `devDependencies` the block vs the `dependencies` block these days? I noticed a `create-react-app`
+  scaffolded repo only uses `dependencies` but I thought build tools and test frameworks were supposed to go in `devDependencies`?  
 
 ## Reference
 
