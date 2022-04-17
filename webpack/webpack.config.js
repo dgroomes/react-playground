@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development', entry: './src/index.ts', plugins: [new HtmlWebpackPlugin({
+    mode: 'development', entry: './src/index.tsx', plugins: [new HtmlWebpackPlugin({
         title: 'javascript-playground/webpack', template: 'src/index.html'
     }),], module: {
         rules: [{
@@ -17,6 +17,6 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
     }, resolve: {
-        extensions: [".ts", ".js"],
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     }
 };

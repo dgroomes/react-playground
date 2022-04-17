@@ -1,4 +1,6 @@
-import {greeting} from "./greeting";
+import {Greeting} from "./Greeting";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Reminder: it is normal in webpack-based projects to have unused imports in JavaScript files.
 //
@@ -12,7 +14,7 @@ import {greeting} from "./greeting";
 // web page by way of JavaScript. You don't really need to know how it works, but you'll probably be curious.
 import './style.css';
 
-const greetingEl: Element = document.createElement('div');
-greetingEl.innerHTML = greeting();
+const root: Element = document.createElement('div');
+document.body.appendChild(root);
 
-document.body.appendChild(greetingEl);
+ReactDOM.render(<Greeting/>, root);
