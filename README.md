@@ -33,8 +33,6 @@ See the README in [vite/](vite/).
 
 ## `webpack`
 
-NOT YET IMPLEMENTED
-
 A React project built with [webpack](https://webpack.js.org/).
 
 See the README in [webpack/](webpack/).
