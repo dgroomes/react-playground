@@ -2,4 +2,4 @@
 
 NOT YET IMPLEMENTED
 
-A React project built with [esbuild](https://esbuild.github.io/)
+A React project built with [esbuild](https://esbuild.github.io/).

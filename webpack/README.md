@@ -2,7 +2,7 @@
 
 NOT YET IMPLEMENTED
 
-A React project built with [webpack](https://webpack.js.org/)
+A React project built with [webpack](https://webpack.js.org/).
 
 ## Instructions
 

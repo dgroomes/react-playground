@@ -27,7 +27,7 @@ See the README in [babel-standalone/](babel-standalone/).
 
 NOT YET IMPLEMENTED
 
-A React project built with [Vite](https://vitejs.dev/)
+A React project built with [Vite](https://vitejs.dev/).
 
 See the README in [vite/](vite/).
 
@@ -35,7 +35,7 @@ See the README in [vite/](vite/).
 
 NOT YET IMPLEMENTED
 
-A React project built with [webpack](https://webpack.js.org/)
+A React project built with [webpack](https://webpack.js.org/).
 
 See the README in [webpack/](webpack/).
 
@@ -43,6 +43,6 @@ See the README in [webpack/](webpack/).
 
 NOT YET IMPLEMENTED
 
-A React project built with [esbuild](https://esbuild.github.io/)
+A React project built with [esbuild](https://esbuild.github.io/).
 
 See the README in [esbuild/](esbuild/).
