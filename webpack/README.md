@@ -7,7 +7,7 @@ A React project built with [webpack](https://webpack.js.org/). It features TypeS
 The surface area of popular software composition options and tooling (e.g. runtime libraries, programming languages, and build
 tools) for web applications is perhaps the largest across all types of software projects in the world. There is a
 combinatorial explosion of options: JS/TS, JSX, webpack/esbuild/babel/vite etc. What's incredible is how all of these
-options are viable and mainstream! In other software ecosystems, there are only a couple dominant options and other
+options are viable and sometimes mainstream! In other software ecosystems, there are only a couple dominant options and other
 niche options.
 
 This sub-project serves as an executable example and knowledge reference for my own sake so that I have at least one
@@ -20,6 +20,7 @@ Here are some elements I need to remember about "how to create a React + TypeScr
   * `npm install --save-dev @types/react @types/react-dom`
 * Use `allowSyntheticDefaultImports: true` in the TypeScript config
   * [StackOverflow answer: use `allowSyntheticDefaultImports: true` in React projects](https://stackoverflow.com/a/57555126)
+  * I don't know how this works, so I really need the reminder.
 * Webpack is probably the safest option.
   * Webpack is safest because it's "Google-ability" is strongest, the docs are extensive, and the feature set is huge. 
 
@@ -51,6 +52,8 @@ General clean ups, todos and things I wish to implement for this project:
 * [ ] Pare down `tsconfig.json` to the required minimum. I'd like to understand `allowSyntheticDefaultImports`.
 * [x] DONE Use async/await instead of promises where feasible.
 * [ ] Use React ["suspense"](https://reactjs.org/docs/react-api.html#reactsuspense) for the mocked data loading.
+  Note, React doesn't actually support suspense for data fetchin yet. The docs read:
+  > In the future we plan to let Suspense handle more scenarios such as data fetching.
 
 ## Reference
 
