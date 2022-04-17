@@ -40,7 +40,7 @@ Follow these instructions to build and run the project.
 General clean ups, todos and things I wish to implement for this project:
 
 * [x] DONE Actually implement some React 
-* [ ] Do something with hooks
+* [x] DONE Do something with hooks
 * [ ] Get the tsconfig.json right. I need to use the React preset, or whatever.
 * [ ] What is the idiomatic way to do CSS in React? Do you just import the "styles.css" file? Is there not really a react
   way to do it? Do you somehow scope the CSS to the React element, like you would with web components?
