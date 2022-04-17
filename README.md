@@ -6,7 +6,7 @@
 > 
 > --<cite>https://reactjs.org/</cite>
 
-**NOTE**: This was developed on macOS and for my own personal use.
+**NOTE**: This project was developed on macOS. It is for my own personal use.
 
 ## Standalone sub-projects
 
