@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import httpGetMessage from './mock-api';
+import {Loading} from './Loading';
 
 /**
  * This is a React "function" component. By contrast, you can define React components as classes but that style is not
@@ -22,7 +23,7 @@ export function Greeting() {
     }, []);
 
     if (message == null) {
-        return <div>Loading...</div>
+        return <Loading />
     } else {
         return <div>{message}</div>
     }
