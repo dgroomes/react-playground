@@ -8,7 +8,11 @@
  * illustrate code concepts in a "playground" repo should be relatable for most readers.
  */
 export default function httpGetMessage(): Promise<string> {
+    console.debug("Making (but it's pretend) an HTTP request to the API...")
     return new Promise<string>((resolve, _rejected) => {
-        setTimeout(() => resolve('Hello from a Mock HTTP API in "react-playground/webpack"!'), 1_000);
+        setTimeout(() => {
+            resolve('Hello from a Mock HTTP API in "react-playground/webpack"!')
+            console.debug("Request completed.")
+        }, 1_000);
     });
 }

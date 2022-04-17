@@ -1,6 +1,6 @@
 import {Greeting} from "./Greeting";
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // Reminder: it is normal in webpack-based projects to have unused imports in JavaScript files.
 //
@@ -16,5 +16,6 @@ import './style.css';
 
 const root: Element = document.createElement('div');
 document.body.appendChild(root);
+const reactRoot = ReactDOM.createRoot(root);
 
-ReactDOM.render(<Greeting/>, root);
+reactRoot.render(<Greeting/>);
