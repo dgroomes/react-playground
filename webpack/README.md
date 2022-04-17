@@ -1,6 +1,6 @@
 # webpack
 
-A React project built with [webpack](https://webpack.js.org/).
+A React project built with [webpack](https://webpack.js.org/). It features TypeScript and `ts-loader`.
 
 ## What does a React project look like?
 
