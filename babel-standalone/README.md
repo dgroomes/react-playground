@@ -4,7 +4,7 @@ A *zero-build-step* React project implemented with Babel's in-browser compiler `
 
 ## Description
 
-This project builds a toy "Markdown browser" hosted in [GitHub pages](https://dgroomes.github.io/react-playground/babel-standalone).
+This project builds a toy "Markdown browser" hosted in [GitHub pages](https://dgroomes.github.io/react-playground).
 The `babel-standalone/` directory is symlinked to `/docs` and this (hopefully) *just works*.
 
 React, Babel and Marked (sometimes known as `Marked.js`) are loaded as script tags from a CDN (<https://unpkg.com/>). Babel
