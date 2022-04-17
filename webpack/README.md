@@ -49,7 +49,8 @@ General clean ups, todos and things I wish to implement for this project:
   * I needed this: `npm install --save-dev @types/react @types/react-dom` 
 * [ ] Pare down `webpack.config.js` to the required minimum. I'm not sure the `resolve` and `module.rules` are correct.
 * [ ] Pare down `tsconfig.json` to the required minimum. I'd like to understand `allowSyntheticDefaultImports`.
-* [ ] Use async/await instead of promises where feasible.
+* [x] DONE Use async/await instead of promises where feasible.
+* [ ] Use React ["suspense"](https://reactjs.org/docs/react-api.html#reactsuspense) for the mocked data loading.
 
 ## Reference
 
