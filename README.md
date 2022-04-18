@@ -39,8 +39,6 @@ See the README in [webpack/](webpack/).
 
 ## `esbuild`
 
-NOT YET IMPLEMENTED
-
-A React project built with [esbuild](https://esbuild.github.io/).
+A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
 See the README in [esbuild/](esbuild/).
