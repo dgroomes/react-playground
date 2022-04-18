@@ -29,7 +29,7 @@ Follow these instructions to build and server the program:
 2. Serve the content (and build continuously)
     * `npm start`
 3. Open the browser
-    * Open <http://127.0.0.1:8000>
+    * Open <http://[::1]:8000>
     * Verify the UI and iterate!
 
 ## Reference
