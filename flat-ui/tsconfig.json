@@ -1,0 +1,31 @@
+/*
+The 'tsconfig.json' file is actually interpreted as a 'jsonc' ("JSON with comments") file so we are allowed to write
+comments! This is great because we can explain why we're using otherwise esoteric configurations. At least, comments are
+useful to people who haven't mastered TypeScript (which is the vast majority of developers, including myself).
+
+See the official reference documentation for tsconfig: https://www.typescriptlang.org/tsconfig
+*/
+
+{
+  "compilerOptions": {
+    // Most projects (and virtually every single new project) should enable the 'esModuleInterop' flag. It allows import
+    // statements like the following, to work:
+    //
+    // ```typescript
+    // import React from 'react'
+    // ```
+    //
+    // See https://www.typescriptlang.org/tsconfig#esModuleInterop
+    "esModuleInterop": true,
+    // The TypeScript toolchain needs to know we are targeting React in the browser.
+    //
+    // How has React, which touts itself as a "JavaScript library", become an implementation detail of a general-purpose
+    // programming language (TypeScript)?
+    //
+    // I mean, I know why. It's because React is not just a library it is a programming language of its own (JSX) and its
+    // popularity has ballooned React's footprint to epic proportions. Remember, React is not a library. This kind of like
+    // how Java is not a programming language (it's the language + the JVM + the ecosystem). React is more than the the 'react.js'
+    // library distribution.
+    "jsx": "react"
+  }
+}
