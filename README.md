@@ -42,3 +42,9 @@ See the README in [webpack/](webpack/).
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
 See the README in [esbuild/](esbuild/).
+
+## `flat-ui`
+
+Learning and exploring the 'flat-ui' React component library.
+
+See the README in [flat-ui/](flat-ui/).
