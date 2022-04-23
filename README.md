@@ -25,9 +25,7 @@ See the README in [babel-standalone/](babel-standalone/).
 
 ## `vite/`
 
-NOT YET IMPLEMENTED
-
-A React project built with [Vite](https://vitejs.dev/).
+A React project built with [Vite](https://vitejs.dev/). It features TypeScript.
 
 See the README in [vite/](vite/).
 
