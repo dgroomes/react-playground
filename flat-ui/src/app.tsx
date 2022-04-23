@@ -7,12 +7,20 @@ const MyComponent = () => {
 
     useEffect(() => {
         async function fetchZips() {
-            const response = await fetch("http://[::1]:8000/zips-GA.jsonl")
+            const response = await fetch("http://[::1]:8000/zips.jsonl")
             const zipsJsonLines: string = await response.text()
             const zips = zipsJsonLines
                 .slice(0, -1) // there is a trailing newline in the response. Cut it out so we have pure lines of JSON.
                 .split('\n')
-                .map(json => JSON.parse(json))
+                .map(function parseJson(json) {
+                    try {
+                        return JSON.parse(json);
+                    } catch (e) {
+                        console.error(`Failed to parse JSON: '${json}'. Exception was ${e}`)
+                        return null
+                    }
+                })
+                .filter(obj => obj !== null)
             setZips(zips)
         }
 
