@@ -22,7 +22,7 @@ Remember, this is a "bare-bones" setup. If I was going to build a larger project
 
 ## Instructions
 
-Follow these instructions to build and server the program:
+Follow these instructions to build and serve the program:
 
 1. Install the dependencies
     * `npm install`
