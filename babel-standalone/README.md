@@ -18,7 +18,9 @@ This project was originally scaffolded using the example project <https://reactj
 Follow these instructions to serve the app (rejoice in the fact that there's no build step!):
 
 1. Serve the source code:
-   * `python3 serve.py`
+   * ```shell
+     python3 serve.py
+     ```
    * Note: If you are on macOS then Python 3 and its built-in modules are already installed on your computer! If you are not on
      macOS, then you may need to install Python. See <https://www.python.org/downloads/>.
 2. Open the browser!

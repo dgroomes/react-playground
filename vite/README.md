@@ -14,9 +14,13 @@ related [Gradle feature request](https://github.com/gradle/gradle/issues/1686).
 Follow these instructions to build and serve the app:
 
 1. Install dependencies:
-   * `npm install`
+   * ```shell
+     npm install
+     ```
 2. Run the server:
-   * `npm run dev`
+   * ```shell
+     npm run dev
+     ```
 3. Open the browser:
    * <http://localhost:3000/>
 

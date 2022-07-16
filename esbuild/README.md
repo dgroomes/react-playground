@@ -25,9 +25,13 @@ Remember, this is a "bare-bones" setup. If I was going to build a larger project
 Follow these instructions to build and serve the program:
 
 1. Install the dependencies
-    * `npm install`
+    * ```shell
+      npm install
+      ```
 2. Serve the content (and build continuously)
-    * `npm start`
+    * ```shell
+      npm start
+      ```
 3. Open the browser
     * Open <http://[::1]:8000>
     * Verify the UI and iterate!
