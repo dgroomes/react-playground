@@ -1,4 +1,6 @@
 {
+  "name": "react-playground_flat-ui",
+  "private": true,
   "dependencies": {
     "@githubocto/flat-ui": "^0.14.0",
     "@types/react": "^18.0.5",

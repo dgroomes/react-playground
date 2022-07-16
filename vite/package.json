@@ -1,5 +1,5 @@
 {
-  "name": "vite",
+  "name": "react-playground_vite",
   "description": "A React project built with [Vite](https://vitejs.dev/). It features TypeScript.",
   "private": true,
   "version": "0.0.0",

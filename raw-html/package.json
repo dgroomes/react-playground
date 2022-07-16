@@ -1,5 +1,6 @@
 {
-  "name": "react-playground_esbuild",
+  "name": "raw-html",
+  "description": "Incorporate raw HTML into a React app.",
   "private": true,
   "dependencies": {
     "@types/react": "^18.0.5",

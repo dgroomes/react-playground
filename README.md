@@ -46,3 +46,9 @@ See the README in [esbuild/](esbuild/).
 Learning and exploring the 'flat-ui' React component library.
 
 See the README in [flat-ui/](flat-ui/).
+
+## `raw-html`
+
+Incorporate raw HTML into a React app.
+
+See the README in [raw-html/](raw-html/).
