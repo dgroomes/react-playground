@@ -9,6 +9,8 @@ This is a working example that showcases how you might incorporate raw HTML into
 when your app has a source of raw HTML that it needs to incorporate into the web page. For example, you might have a
 Markdown document that you send to the GitHub "markdown-to-HTML" API and now you want to splice the HTML into the page.
 
+I posted this code as an [answer to a StackOverflow question](https://stackoverflow.com/a/73006713).
+
 
 ## Instructions
 
