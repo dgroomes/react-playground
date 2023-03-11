@@ -2,6 +2,7 @@
 
 A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
 
+
 ## Description
 
 This project builds a toy "Markdown browser" hosted in [GitHub pages](https://dgroomes.github.io/react-playground).
@@ -12,6 +13,7 @@ transpiles the ESNext source code on-the-fly in the browser. Likewise, Marked co
 on-the-fly in the browser.
 
 This project was originally scaffolded using the example project <https://reactjs.org/docs/add-react-to-a-website.html>. 
+
 
 ## Instructions
 
@@ -25,6 +27,7 @@ Follow these instructions to serve the app (rejoice in the fact that there's no 
      macOS, then you may need to install Python. See <https://www.python.org/downloads/>.
 2. Open the browser!
    * Open <http://localhost:8080> in your browser
+
 
 ## Reference
 

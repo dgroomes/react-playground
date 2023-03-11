@@ -15,4 +15,5 @@ class App extends React.PureComponent {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById("app"))
+const root = document.getElementById("root");
+ReactDOM.createRoot(root).render(<App/>);

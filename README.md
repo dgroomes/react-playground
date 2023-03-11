@@ -8,6 +8,7 @@
 
 **NOTE**: This project was developed on macOS. It is for my own personal use.
 
+
 ## Standalone sub-projects
 
 This repository illustrates different concepts, patterns and examples via standalone sub-projects. Each sub-project is
@@ -23,31 +24,36 @@ A *zero-build-step* React project implemented with Babel's in-browser compiler `
 
 See the README in [babel-standalone/](babel-standalone/).
 
+
 ## `vite/`
 
 A React project built with [Vite](https://vitejs.dev/). It features TypeScript.
 
 See the README in [vite/](vite/).
 
-## `webpack`
+
+## `webpack/`
 
 A React project built with [webpack](https://webpack.js.org/). It features TypeScript and `ts-loader`.
 
 See the README in [webpack/](webpack/).
 
-## `esbuild`
+
+## `esbuild/`
 
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
 See the README in [esbuild/](esbuild/).
 
-## `flat-ui`
+
+## `flat-ui/`
 
 Learning and exploring the 'flat-ui' React component library.
 
 See the README in [flat-ui/](flat-ui/).
 
-## `raw-html`
+
+## `raw-html/`
 
 Incorporate raw HTML into a React app.
 
