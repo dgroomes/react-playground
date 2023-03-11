@@ -2,6 +2,7 @@
 
 A React project built with [webpack](https://webpack.js.org/). It features TypeScript and `ts-loader`.
 
+
 ## What does a React project look like?
 
 The surface area of popular software composition options and tooling (e.g. runtime libraries, programming languages, and build
@@ -21,8 +22,9 @@ Here are some elements I need to remember about "how to create a React + TypeScr
 * Use `allowSyntheticDefaultImports: true` in the TypeScript config
   * [StackOverflow answer: use `allowSyntheticDefaultImports: true` in React projects](https://stackoverflow.com/a/57555126)
   * I don't know how this works, so I really need the reminder.
-* Webpack is probably the safest option.
-  * Webpack is safest because it's "Google-ability" is strongest, the docs are extensive, and the feature set is huge. 
+* webpack is probably the safest option.
+  * webpack is safest because it's "Google-ability" is strongest, the docs are extensive, and the feature set is huge. 
+
 
 ## Instructions
 
@@ -32,15 +34,16 @@ Follow these instructions to build and run the project.
     * ```shell
       npm install
       ```
-1. Build the project:
+2. Build the project:
     * ```shell
       npm run build
       ```
-1. Alternatively, build the project continuously and serve the output:
+3. Alternatively, build the project continuously and serve the output:
     * ```shell
       npm start
       ```
     * The project is ready to be viewed in the browser! The browser should open automatically.
+
 
 ## Wish List
 
@@ -60,6 +63,8 @@ General clean ups, todos and things I wish to implement for this project:
 * [ ] Use React ["suspense"](https://reactjs.org/docs/react-api.html#reactsuspense) for the mocked data loading.
   Note, React doesn't actually support suspense for data fetchin yet. The docs read:
   > In the future we plan to let Suspense handle more scenarios such as data fetching.
+* [x] DONE Upgrade to latest webpack and other deps
+
 
 ## Reference
 
