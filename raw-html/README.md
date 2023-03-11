@@ -2,8 +2,8 @@
 
 Incorporate raw HTML into a React app.
 
-## Description
 
+## Description
 
 This is a working example that showcases how you might incorporate raw HTML into a React app at runtime. This is a use-case
 when your app has a source of raw HTML that it needs to incorporate into the web page. For example, you might have a
