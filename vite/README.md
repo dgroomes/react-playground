@@ -26,7 +26,7 @@ Follow these instructions to build and serve the app:
      npm run dev
      ```
 4. Open the browser:
-   * <http://localhost:3000/>
+   * <http://localhost:5173/>
 
 
 ## Notes
@@ -47,7 +47,9 @@ General clean ups, todos and things I wish to implement for this project:
   * Very cool that there is a migration guide. The documentation culture of front-end open source is very good.
     Link: <https://v3.vitejs.dev/guide/migration.html>. It's interesting that there are entirely different Vite doc
     sites. That means it reduces that chances of link rot.
-  * What version of the Vite React plugin scales with a Vite 3.x migration? I don't want to overshoot.
+  * What version of the Vite React plugin scales with a Vite 3.x migration? I don't want to overshoot. UPDATE: this is
+    frustrating the npm page only has 3.x and the GitHub repo only has 3.x releases. I'm assuming there existed a 2.x
+    line but I can't even find the 1.x line release notes. I'll jump straight to 3.x when I upgrade to Vite 4.
 * [ ] Upgrade to Vite 4.x.
 
 
