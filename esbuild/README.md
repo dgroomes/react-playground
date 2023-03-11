@@ -2,6 +2,7 @@
 
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
+
 ## Description
 
 This is a bare-bones setup for a React and TypeScript project. esbuild is an enabler for such a simple setup. The
@@ -20,6 +21,7 @@ project includes foundational components and omits optional ones:
 
 Remember, this is a "bare-bones" setup. If I was going to build a larger project then I would use webpack.
 
+
 ## Instructions
 
 Follow these instructions to build and serve the program:
@@ -35,6 +37,14 @@ Follow these instructions to build and serve the program:
 3. Open the browser
     * Open <http://[::1]:8000>
     * Verify the UI and iterate!
+
+
+## Wish List
+
+General clean ups, todos and things I wish to implement for this project:
+
+* Consider figure out source maps
+
 
 ## Reference
 
