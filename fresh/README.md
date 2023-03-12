@@ -2,6 +2,8 @@
 
 A React project built with [Deno](https://deno.land/) and using the [Fresh](https://fresh.deno.dev/) framework.
 
+NOTE: Fresh does not support static site (which makes sense for what it does kind of; but Next.js does and I use it).
+
 
 ## Overview
 
