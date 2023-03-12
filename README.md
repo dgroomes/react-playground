@@ -18,6 +18,7 @@ re-using the code.
 
 The sub-projects include:
 
+
 ## `babel-standalone/`
 
 A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
@@ -44,6 +45,13 @@ See the README in [webpack/](webpack/).
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
 See the README in [esbuild/](esbuild/).
+
+
+## `fresh/`
+
+A React project built with [Deno](https://deno.land/) and using the [Fresh](https://fresh.deno.dev/) framework.
+
+See the README in [fresh/](fresh/).
 
 
 ## `flat-ui/`
