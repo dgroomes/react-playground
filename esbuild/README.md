@@ -45,7 +45,7 @@ General clean ups, todos and things I wish to implement for this project:
 
 * [x] DONE Add a component library to make the example more interesting and really exercise the bundler and showcase the experience.
   I think I'll add Ant Design, I like look of it and it's extremely popular (by stars at least).
-* [ ] Consider figuring out source maps
+* [x] DONE Consider figuring out source maps
 
 
 ## Reference
