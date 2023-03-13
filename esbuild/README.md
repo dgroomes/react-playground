@@ -35,7 +35,7 @@ Follow these instructions to build and serve the program:
       npm start
       ```
 3. Open the browser
-    * Open <http://[::1]:8000>
+    * Open <http://[::1]:8080>
     * Verify the UI and iterate!
 
 
@@ -46,7 +46,8 @@ General clean ups, todos and things I wish to implement for this project:
 * [x] DONE Add a component library to make the example more interesting and really exercise the bundler and showcase the experience.
   I think I'll add Ant Design, I like look of it and it's extremely popular (by stars at least).
 * [x] DONE Consider figuring out source maps
-
+* [x] DONE Show how to bundle CSS. While I don't really need this in this project because Ant Design uses CSS-in-JS, it is a
+  common usecase and I want to figure out how to do it idiomatically in esbuild.
 
 ## Reference
 

@@ -7,7 +7,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "esbuild src/app.tsx --servedir=www --outdir=www/js --bundle --sourcemap --serve=[::1]:8000"
+    "start": "node serve.mjs"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
