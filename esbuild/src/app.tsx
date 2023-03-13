@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {ProjectHeader} from "./projectHeader";
+import {Main} from "./Main";
 
 const root = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(<ProjectHeader/>);
+ReactDOM.createRoot(root).render(<Main/>);
