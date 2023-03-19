@@ -1,0 +1,13 @@
+/*
+See the official reference documentation for tsconfig: https://www.typescriptlang.org/tsconfig
+*/
+
+{
+  "compilerOptions": {
+    // See https://www.typescriptlang.org/tsconfig#esModuleInterop
+    "esModuleInterop": true,
+    "jsx": "react",
+    // Target the browser.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  }
+}

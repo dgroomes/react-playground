@@ -68,6 +68,13 @@ Incorporate raw HTML into a React app.
 See the README in [raw-html/](raw-html/).
 
 
+## `hooks/`
+
+React hook examples.
+
+See the README in [hooks/](hooks/).
+
+
 ## Wish List
 
 General clean ups, todos and things I wish to implement for this project:
