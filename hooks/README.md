@@ -35,7 +35,7 @@ Follow these instructions to build and serve the program:
 
 General clean ups, todos and things I wish to implement for this project:
 
-* [ ] Copy the [`useWindowListener` example program](https://react.dev/reference/react/useEffect#examples-custom-hooks)
+* [x] DONE Copy the [`useWindowListener` example program](https://react.dev/reference/react/useEffect#examples-custom-hooks)
   from the React docs. I found this example as I was trying to learn how `useEffect` works (rather, re-learning it
   because I had a decent understanding of it last year but I forgot lots of details because I don't exercise this
   knowledge frequently). This example is actually expensive because it constantly registers and unregisters the event
