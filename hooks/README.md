@@ -28,7 +28,7 @@ Follow these instructions to build and serve the program:
       ```
 4. Open the browser
     * Open <http://[::1]:8080>
-    * Relate what you see in the browser to the code. Try both `CursorSpotlight` and `CursorSpotlight2`. 
+    * Relate what you see on the web page to the code. 
 
 
 ## Wish List
@@ -42,7 +42,7 @@ General clean ups, todos and things I wish to implement for this project:
   listener. I think they got this one wrong? You need to be *extremely careful* with the dependencies you pass to `useEffect`.
 * [x] DONE Re-implement the `CursorSpotlight` example program so that the `useEffect` hook doesn't re-register
   the event listener on every render. The trick is to use `useCallback`.
-* [ ] Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
+* [x] DONE (I tried that but then iframes make for a more reduced (and thus easier to learn) example) Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
   enter, I want to enable the spotlight.
 
 ## Reference
