@@ -28,7 +28,7 @@ Follow these instructions to build and serve the program:
       ```
 4. Open the browser
     * Open <http://[::1]:8080>
-    * Verify the UI and iterate!
+    * Relate what you see in the browser to the code. Try both `CursorSpotlight` and `CursorSpotlight2`. 
 
 
 ## Wish List
@@ -40,10 +40,10 @@ General clean ups, todos and things I wish to implement for this project:
   because I had a decent understanding of it last year but I forgot lots of details because I don't exercise this
   knowledge frequently). This example is actually expensive because it constantly registers and unregisters the event
   listener. I think they got this one wrong? You need to be *extremely careful* with the dependencies you pass to `useEffect`.
-* [ ] Re-implement the `useWindowListener` example program with a custom hook that uses `useRef` (or the memoize hook; or
-  there's gotta be a way to do this...) to store the event listener callback. This is a better implementation because it
-  doesn't re-register the event listener on every render.
-
+* [x] DONE Re-implement the `CursorSpotlight` example program so that the `useEffect` hook doesn't re-register
+  the event listener on every render. The trick is to use `useCallback`.
+* [ ] Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
+  enter, I want to enable the spotlight.
 
 ## Reference
 

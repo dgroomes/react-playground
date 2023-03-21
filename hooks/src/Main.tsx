@@ -1,5 +1,6 @@
 import React from "react";
 import {CursorSpotlight} from "./CursorSpotlight";
+import {CursorSpotlight2} from "./CursorSpotlight2";
 
 export function Main() {
     return (<>
@@ -8,5 +9,6 @@ export function Main() {
         the <em>dgroomes/react-playground</em> repository for more information.
 
         <CursorSpotlight/>
+        {/*<CursorSpotlight2/>*/}
     </>)
 }
