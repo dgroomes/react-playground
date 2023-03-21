@@ -1,15 +1,13 @@
-# hooks
+# use-effect
 
-NOT YET IMPLEMENTED
-
-React hook examples.
+A simple example of how to use (and not use) the `useEffect` React hook.
 
 
 ## Overview
 
 If you develop with React, you will need to use hooks, and eventually you will need a deep understanding of hooks --
 especially `useEffect`. This project dives into `useEffect` and provides examples of how to use it (and how not to use
-it). 
+it).
 
 
 ## Instructions
@@ -44,6 +42,7 @@ General clean ups, todos and things I wish to implement for this project:
   the event listener on every render. The trick is to use `useCallback`.
 * [x] DONE (I tried that but then iframes make for a more reduced (and thus easier to learn) example) Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
   enter, I want to enable the spotlight.
+
 
 ## Reference
 

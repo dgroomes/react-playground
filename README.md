@@ -68,11 +68,11 @@ Incorporate raw HTML into a React app.
 See the README in [raw-html/](raw-html/).
 
 
-## `hooks/`
+## `use-effect-hook/`
 
-React hook examples.
+A simple example of how to use (and not use) the `useEffect` React hook.
 
-See the README in [hooks/](hooks/).
+See the README in [use-effect-hook/](use-effect-hook/).
 
 
 ## Wish List
