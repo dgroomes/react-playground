@@ -1,4 +1,4 @@
-# use-effect
+# use-effect-hook
 
 A simple example of how to use (and not use) the `useEffect` React hook.
 
