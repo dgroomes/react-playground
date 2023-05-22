@@ -35,3 +35,6 @@ General clean ups, TODOs and things I wish to implement for this project:
 * React 18 defect. With React 18, it complains when you don't use ReactDOM from the *client* but that doesn't seem to be
   possible. Even React's own CDN-based example has this error: <https://raw.githubusercontent.com/reactjs/reactjs.org/main/static/html/single-file-example.html>.
   See the defect described in [this StackOverflow question](https://stackoverflow.com/q/71696487).
+* [ ] Support a couple levels of directories. On the GitHub Pages-hosted page, I want to see more than just the root
+  `README.md`. I want to see `babel-standalone/README.md`, `babel-standalone/wish-list.md`, `babel-standalone/CHANGELOG.md`,
+  `esbuild/README.md` etc.

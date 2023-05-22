@@ -81,6 +81,12 @@ class SourceBrowser extends React.Component {
                 }
             })
             .then(markown => {
+                // This is a bit of an awkward place to do this but configure Marked in such a way
+                // newly advised by the 5.x line (see https://github.com/markedjs/marked/releases/tag/v5.0.0).
+                marked.use({
+                    mangle: false,
+                    headerIds: false,
+                });
                 let html = marked.parse(markown);
                 this.setState({ pageName: documentName, pageContent: html})
             })
