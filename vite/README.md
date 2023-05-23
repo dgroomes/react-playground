@@ -16,7 +16,7 @@ related [Gradle feature request](https://github.com/gradle/gradle/issues/1686).
 Follow these instructions to build and serve the app:
 
 1. Pre-requisite: Node.js
-   * I used version 18.15.0
+   * I used version 18.16.0
 2. Install dependencies:
    * ```shell
      npm install
