@@ -11,14 +11,16 @@ combinatorial explosion of options: JS/TS, JSX, webpack/esbuild/babel/vite etc. 
 options are viable and sometimes mainstream! In other software ecosystems, there are only a couple dominant options and other
 niche options.
 
-This sub-project serves as an executable example and knowledge reference for my own sake so that I have at least one
+This subproject serves as an executable example and knowledge reference for my own sake so that I have at least one
 "working and well-understood" setup for a React project. I'm eager to explore many of the different options, and this
 is just one of them.
 
 Here are some elements I need to remember about "how to create a React + TypeScript project":
 
 * Install the *DefinitelyTyped* type definitions for each library
-  * `npm install --save-dev @types/react @types/react-dom`
+  * ```shell
+    npm install --save-dev @types/react @types/react-dom
+    ```
 * Use `allowSyntheticDefaultImports: true` in the TypeScript config
   * [StackOverflow answer: use `allowSyntheticDefaultImports: true` in React projects](https://stackoverflow.com/a/57555126)
   * I don't know how this works, so I really need the reminder.
