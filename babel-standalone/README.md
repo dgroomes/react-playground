@@ -3,7 +3,7 @@
 A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
 
 
-## Description
+## Overview
 
 This project builds a toy "Markdown browser" hosted in [GitHub pages](https://dgroomes.github.io/react-playground).
 The `babel-standalone/` directory is symlinked to `/docs` and this (hopefully) *just works*.
@@ -12,7 +12,10 @@ React, Babel and Marked (sometimes known as `Marked.js`) are loaded as script ta
 transpiles the ESNext source code on-the-fly in the browser. Likewise, Marked compiles the source Markdown files into HTML
 on-the-fly in the browser.
 
-This project was originally scaffolded using the example project <https://reactjs.org/docs/add-react-to-a-website.html>. 
+This project was originally scaffolded using the example project in the *old docs* incarnation of <https://reactjs.org/docs/add-react-to-a-website.html>.
+Unfortunately, the *new docs* (which is what the link will bring you to today) do not offer any information about using
+React/JSX in a browser without a build step. Or in other words, React doesn't seem to support React *the CDN way*
+anymore. This is a bummer.
 
 
 ## Instructions
