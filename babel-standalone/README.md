@@ -36,10 +36,10 @@ Follow these instructions to serve the app (rejoice in the fact that there's no 
 
 General clean-ups, todos and things I wish to implement for this project:
 
-* [ ] The GitHub Pages is wonky. It only shows `README.md` and also shows the raw HTML content if you click into the README.md
-  and then press the back button.
-* [ ] Consider removing this subproject because React doesn't endorse React *the CDN way* anymore. Although a "zero-build-step"
-  GitHub markdown viewer is pretty awesome in theory and it does kind of work. 
+* [ ] De-scope all the "GitHub Pages dynamic viewing" features. I still like the
+  functionality, but I had already ported it to a standalone project: <https://github.com/dgroomes/github-pages-dynamic-viewer>
+  and I did this because I want to focus specifically on "React/JSX the CDN way" which is already enough to demo in a
+  single subproject.
 
 
 ## Reference

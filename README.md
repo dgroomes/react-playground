@@ -78,9 +78,5 @@ General clean-ups, todos and things I wish to implement for this project:
 * [ ] Consider moving my Next.js playground to here. Or rather, moving all the "toolchain" example projects out of here
   and into a new project called something like `react-toolchain-playground`. That would be a big playground, and also it
   would free up this playground to focus on features of React itself (a much better fit).
-* [ ] De-scope all the "GitHub Pages dynamic viewing" features out of `babel-standalone/`. I still like the
-  functionality, but I had already ported it to a standalone project: <https://github.com/dgroomes/github-pages-dynamic-viewer>
-  and I did this because I want to focus specifically on "React/JSX the CDN way" which is already enough to demo in a
-  single subproject.
 * [ ] Consider bringing back the core content of `flat-ui` but use React Table or a viable/idiomatic alternative, if
   it would make a useful reference.
