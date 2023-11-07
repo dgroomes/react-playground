@@ -3,7 +3,7 @@
 A React project built with [Vite](https://vitejs.dev/). It features TypeScript.
 
 
-## Description
+## Overview
 
 I scaffolded this project with npm's awesome [`init` command](https://docs.npmjs.com/cli/v8/commands/npm-init) in combination
 with Vite's `init` *initializer* which let me easily declare "I want a React and TypeScript project". Very cool. I wish
@@ -39,7 +39,7 @@ makes it harder to commit at face value.
 
 ## Wish List
 
-General clean ups, todos and things I wish to implement for this project:
+General clean-ups, todos and things I wish to implement for this project:
 
 * [ ] What is the Vite way to do CSS? Do we bundle the CSS into the JavaScript bundle file (the Webpack way)? 
 * [x] DONE Upgrade React
@@ -49,7 +49,7 @@ General clean ups, todos and things I wish to implement for this project:
     sites. That means it reduces that chances of link rot.
   * What version of the Vite React plugin scales with a Vite 3.x migration? I don't want to overshoot. UPDATE: this is
     frustrating the npm page only has 3.x and the GitHub repo only has 3.x releases. I'm assuming there existed a 2.x
-    line but I can't even find the 1.x line release notes. I'll jump straight to 3.x when I upgrade to Vite 4.
+    line, but I can't even find the 1.x line release notes. I'll jump straight to 3.x when I upgrade to Vite 4.
 * [x] DONE Upgrade to Vite 4.x.
 
 
