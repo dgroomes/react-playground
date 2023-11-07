@@ -9,14 +9,14 @@
 **NOTE**: This project was developed on macOS. It is for my own personal use.
 
 
-## Standalone sub-projects
+## Standalone subprojects
 
-This repository illustrates different concepts, patterns and examples via standalone sub-projects. Each sub-project is
-completely independent of the others and do not depend on the root project. This _standalone sub-project constraint_
-forces the sub-projects to be complete and maximizes the reader's chances of successfully running, understanding, and
+This repository illustrates different concepts, patterns and examples via standalone subprojects. Each subproject is
+completely independent of the others and do not depend on the root project. This _standalone subproject constraint_
+forces the subprojects to be complete and maximizes the reader's chances of successfully running, understanding, and
 re-using the code.
 
-The sub-projects include:
+The subprojects include:
 
 
 ## `babel-standalone/`
@@ -54,13 +54,6 @@ A React project built with [Deno](https://deno.land/) and using the [Fresh](http
 See the README in [fresh/](fresh/).
 
 
-## `flat-ui/`
-
-Learning and exploring the 'flat-ui' React component library.
-
-See the README in [flat-ui/](flat-ui/).
-
-
 ## `raw-html/`
 
 Incorporate raw HTML into a React app.
@@ -77,7 +70,7 @@ See the README in [use-effect-hook/](use-effect-hook/).
 
 ## Wish List
 
-General clean ups, todos and things I wish to implement for this project:
+General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE (although I'm not pursuing it because it doesn't support SSG) Consider creating a [Deno Fresh](https://github.com/denoland/fresh) example project. I like what Deno has accomplished
   and where it's going and I was pleasantly surprised to see that Fresh is branded with a 1.x release. I generally am
@@ -89,3 +82,5 @@ General clean ups, todos and things I wish to implement for this project:
   functionality, but I had already ported it to a standalone project: <https://github.com/dgroomes/github-pages-dynamic-viewer>
   and I did this because I want to focus specifically on "React/JSX the CDN way" which is already enough to demo in a
   single subproject.
+* [ ] Consider bringing back the core content of `flat-ui` but use React Table or a viable/idiomatic alternative, if
+  it would make a useful reference.
