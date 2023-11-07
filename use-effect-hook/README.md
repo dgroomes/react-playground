@@ -31,7 +31,7 @@ Follow these instructions to build and serve the program:
 
 ## Wish List
 
-General clean ups, todos and things I wish to implement for this project:
+General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Copy the [`useWindowListener` example program](https://react.dev/reference/react/useEffect#examples-custom-hooks)
   from the React docs. I found this example as I was trying to learn how `useEffect` works (rather, re-learning it
