@@ -49,7 +49,7 @@ Follow these instructions to build and run the project.
 
 ## Wish List
 
-General clean ups, todos and things I wish to implement for this project:
+General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Actually implement some React 
 * [x] DONE Do something with hooks
