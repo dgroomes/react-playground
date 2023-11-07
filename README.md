@@ -47,13 +47,6 @@ A bare-bones React and TypeScript project built with [esbuild](https://esbuild.g
 See the README in [esbuild/](esbuild/).
 
 
-## `fresh/`
-
-A React project built with [Deno](https://deno.land/) and using the [Fresh](https://fresh.deno.dev/) framework.
-
-See the README in [fresh/](fresh/).
-
-
 ## `raw-html/`
 
 Incorporate raw HTML into a React app.
