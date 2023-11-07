@@ -1,5 +1,5 @@
 {
-  "name": "raw-html",
+  "name": "react-playground_raw-html",
   "description": "Incorporate raw HTML into a React app.",
   "private": true,
   "dependencies": {
@@ -7,9 +7,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "esbuild": "^0.17.11"
+    "@types/react": "^18.2.36",
+    "@types/react-dom": "^18.2.14",
+    "esbuild": "^0.19.5"
   },
   "scripts": {
     "start": "esbuild src/app.jsx --servedir=www --outdir=www/js --bundle --serve=[::1]:8000"
