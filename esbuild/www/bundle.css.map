@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/reset.css", "../src/style.css"],
-  "sourcesContent": ["/*\nThis is an exaggeratedly abbreviated example a \"CSS reset\" stylesheet that removes some default browser styles.\n*/\n\nhtml {\n    line-height: 1.15;\n    -webkit-text-size-adjust: 100%;\n}\n\nbody {\n    margin: 0;\n}\n", "/*\nThis represents the main CSS file for the project. It imports the other styles. The contents of it and the imported\nstylesheets will be bundled into a single CSS file by esbuild.\n */\n\n@import \"./reset.css\";\n\nbody {\n    margin: 50px 100px;\n}\n"],
-  "mappings": ";AAIA;AACI;AACA;AAAA;AAGJ;AACI;AAAA;;;ACHJ;AACI;AAAA;",
-  "names": []
-}

@@ -3,7 +3,7 @@
 A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
 
 
-## Description
+## Overview
 
 This is a bare-bones setup for a React and TypeScript project. esbuild is an enabler for such a simple setup. The
 project includes foundational components and omits optional ones:
@@ -41,13 +41,14 @@ Follow these instructions to build and serve the program:
 
 ## Wish List
 
-General clean ups, todos and things I wish to implement for this project:
+General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Add a component library to make the example more interesting and really exercise the bundler and showcase the experience.
-  I think I'll add Ant Design, I like look of it and it's extremely popular (by stars at least).
+  I think I'll add Ant Design, I like look of it, and it's extremely popular (by stars at least).
 * [x] DONE Consider figuring out source maps
 * [x] DONE Show how to bundle CSS. While I don't really need this in this project because Ant Design uses CSS-in-JS, it is a
-  common usecase and I want to figure out how to do it idiomatically in esbuild.
+  common use case and I want to figure out how to do it idiomatically in esbuild.
+
 
 ## Reference
 

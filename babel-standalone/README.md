@@ -14,7 +14,7 @@ on-the-fly in the browser.
 
 This project was originally scaffolded using the example project in the *old docs* incarnation of <https://reactjs.org/docs/add-react-to-a-website.html>.
 Unfortunately, the *new docs* (which is what the link will bring you to today) do not offer any information about using
-React/JSX in a browser without a build step. Or in other words, React doesn't seem to support React *the CDN way*
+React/JSX in a browser without a build step. Or in other words, React doesn't seem to endorse React *the CDN way*
 anymore. This is a bummer.
 
 
@@ -30,6 +30,16 @@ Follow these instructions to serve the app (rejoice in the fact that there's no 
      macOS, then you may need to install Python. See <https://www.python.org/downloads/>.
 2. Open the browser!
    * Open <http://localhost:8080> in your browser
+
+
+## Wish List
+
+General clean-ups, todos and things I wish to implement for this project:
+
+* [ ] The GitHub Pages is wonky. It only shows `README.md` and also shows the raw HTML content if you click into the README.md
+  and then press the back button.
+* [ ] Consider removing this subproject because React doesn't endorse React *the CDN way* anymore. Although a "zero-build-step"
+  GitHub markdown viewer is pretty awesome in theory and it does kind of work. 
 
 
 ## Reference
