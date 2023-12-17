@@ -66,6 +66,7 @@ General clean-ups, todos and things I wish to implement for this project:
   Note, React doesn't actually support suspense for data fetchin yet. The docs read:
   > In the future we plan to let Suspense handle more scenarios such as data fetching.
 * [x] DONE Upgrade to latest webpack and other deps
+* [x] DONE Debug logging.
 
 
 ## Reference
