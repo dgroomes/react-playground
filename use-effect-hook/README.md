@@ -43,6 +43,7 @@ General clean-ups, todos and things I wish to implement for this project:
 * [x] DONE (I tried that but then iframes make for a more reduced (and thus easier to learn) example) Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
   enter, I want to enable the spotlight.
 * [x] DONE Remove TypeScript from this project. It's not essential to the example.
+* [x] DONE Should I install type definitions even though I'm not using TypeScript? I think so.
 
 
 ## Reference
