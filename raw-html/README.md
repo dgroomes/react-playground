@@ -16,15 +16,17 @@ I posted this code as an [answer to a StackOverflow question](https://stackoverf
 
 Follow these instructions to build and serve the program:
 
-1. Install the dependencies
+1. Pre-requisite: Node.js
+   * I used version 20.11.0
+2. Install the dependencies
     * ```shell
       npm install
       ```
-2. Serve the content (and build continuously)
+3. Serve the content (and build continuously)
     * ```shell
       npm start
       ```
-3. Open the browser
+4. Open the browser
     * Open <http://[::1]:8000>
     * Verify the UI and iterate!
 
