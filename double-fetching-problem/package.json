@@ -1,6 +1,5 @@
 {
-  "name": "react-playground_raw-html",
-  "description": "Incorporate raw HTML into a React app.",
+  "name": "react-playground_double-fetching-problem",
   "private": true,
   "dependencies": {
     "react": "~18.2.0",

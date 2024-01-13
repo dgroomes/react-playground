@@ -61,11 +61,11 @@ A simple example of how to use (and not use) the `useEffect` React hook.
 See the README in [use-effect-hook/](use-effect-hook/).
 
 
-## `query/`
+## `double-fetching-problem/`
 
-How do you query data in a React app? How do you avoid double `fetch` requests especially in the face of `<React.StrictMode>`?
+An illustration of the familiar "double fetching" problem that many React program designs are susceptible to.
 
-See the README in [query/](query/).
+See the README in [double-fetching-problem/](double-fetching-problem/).
 
 
 ## `tanstack-query/`
