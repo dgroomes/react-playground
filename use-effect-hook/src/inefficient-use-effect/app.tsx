@@ -39,7 +39,8 @@ export function Main() {
         },
         // The dependencies array here describes, "Hey React, please re-run this effect when the listener changes."
         // Be very careful when you use non-primitive types, like functions and objects, in the dependencies array. Every
-        // function is different from every other function, even if the function bodies are the result of copy/paste.
+        // function is different from every other function, even if you feel that the function bodies are "the same" because
+        // they are the result of copy/paste.
         // React uses the "Object.is" method (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
         // to compare the old and new values of the dependencies array.
         [listener])
