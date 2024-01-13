@@ -8,7 +8,7 @@ function News() {
 
     useEffect(() => {
         console.log("[News] `useEffect` callback invoked. Making a 'fetch' request.");
-        fetch('/front-page-news.json') // replace with the actual path to your JSON file
+        fetch('/front-page-news.json')
             .then(data => {
                 // Simulate a delay in the API response
                 return new Promise(resolve => setTimeout(() => resolve(data), 2500));
