@@ -46,7 +46,7 @@ Follow these instructions to build and serve the program:
 General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Implement
-* [ ] How to implement "refresh this data"? If I had a refresh button, do you call some method to invalidate the cache
+* [x] DONE (very nice, TanStack Query delivering excellently on its promise) How to implement "refresh this data"? If I had a refresh button, do you call some method to invalidate the cache
   for that key or something?
 
 
