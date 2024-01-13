@@ -1,7 +1,7 @@
-import React, {useCallback, useEffect, useState} from "react";
-import ReactDOM from 'react-dom/client'
+import React, {useEffect, useState} from "react"
+import ReactDOM from "react-dom/client"
 
-// The 'statistics' tracking is purposely done outside of React so we avoid conflating the state management of these
+// The 'statistics' tracking is purposely done outside of React, so we avoid conflating the state management of these
 // statistics with the state management in the example.
 const statistics = {
     eventListenersAdded: 0,
@@ -15,19 +15,17 @@ function drawStatistics() {
 
 /**
  * This program creates a spotlight effect that follows the cursor. A colorful spotlight follows your cursor around. This is
- * implemented efficiently because it doesn't re-register a new listener function on every render. The trick is to use
- * "useCallback" which memoizes the function.
- *
- * Compare this implementation with the one in 'inefficient-use-effect/app.tsx'.
+ * implemented inefficiently because it re-registers a new listener function on every render. This is expensive! Compare
+ * this implementation with the one in 'efficient-use-effect/app.tsx'.
  *
  * This example is adapted from the React docs: https://react.dev/reference/react/useEffect#examples-custom-hooks
  */
 export function Main() {
     const [position, setPosition] = useState({x: 0, y: 0})
 
-    const listener = useCallback((e) => {
+    const listener = (e) => {
         setPosition({x: e.clientX, y: e.clientY})
-    }, [])
+    }
 
     useEffect(() => {
             statistics.eventListenersAdded++

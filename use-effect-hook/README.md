@@ -15,7 +15,7 @@ it).
 Follow these instructions to build and serve the program:
 
 1. Pre-requisite: Node.js
-    * I used version 18.15.0
+    * I used version 20.11.0
 2. Install the dependencies
     * ```shell
       npm install
@@ -42,6 +42,7 @@ General clean-ups, todos and things I wish to implement for this project:
   the event listener on every render. The trick is to use `useCallback`.
 * [x] DONE (I tried that but then iframes make for a more reduced (and thus easier to learn) example) Can I have both `CursorSpolight` and `CursorSpotlight2` in the code at the same time? I want two boxes. On mouse
   enter, I want to enable the spotlight.
+* [x] DONE Remove TypeScript from this project. It's not essential to the example.
 
 
 ## Reference

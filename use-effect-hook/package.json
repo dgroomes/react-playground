@@ -9,8 +9,6 @@
     "start": "node serve.mjs"
   },
   "devDependencies": {
-    "@types/react": "^18.2.36",
-    "@types/react-dom": "^18.2.14",
     "esbuild": "^0.19.5"
   }
 }

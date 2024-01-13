@@ -8,10 +8,10 @@ import * as esbuild from 'esbuild'
 
 const ctx = await esbuild.context({
     entryPoints: [
-        {"in": 'src/root/app.tsx', "out": 'root-bundle'},
+        {"in": 'src/root/app.jsx', "out": 'root-bundle'},
         {"in": 'src/root/style.css', "out": 'root-bundle'},
-        {"in": 'src/inefficient-use-effect/app.tsx', "out": 'inefficient-use-effect-bundle'},
-        {"in": 'src/efficient-use-effect/app.tsx', "out": 'efficient-use-effect-bundle'}
+        {"in": 'src/inefficient-use-effect/app.jsx', "out": 'inefficient-use-effect-bundle'},
+        {"in": 'src/efficient-use-effect/app.jsx', "out": 'efficient-use-effect-bundle'}
     ],
     platform: 'browser',
     outdir: 'www',
