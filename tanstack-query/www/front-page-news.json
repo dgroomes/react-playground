@@ -1,0 +1,23 @@
+{
+  "description": "This JSON file is designed as a mocked response for an API call to some server. Let's pretend that it's a news service and that this is data is front page news",
+  "headlines": [
+    {
+      "title": "Astonishing Discovery Shocks the World",
+      "correspondent": "Alex Kim",
+      "publishedOn": "2023-07-15",
+      "summary": "In an unprecedented event, scientists have uncovered something so astonishing that it challenges the very fabric of our understanding. The world is in awe, and you won't believe what it is until you see it."
+    },
+    {
+      "title": "Unbelievable Turn of Events Stuns the Public",
+      "correspondent": "Taylor Morgan",
+      "publishedOn": "2023-07-16",
+      "summary": "Today's revelation has left the public in stunned silence. What seemed impossible has occurred, reshaping our perception of reality in a way never seen before. The details are inside, and they are as shocking as they are true."
+    },
+    {
+      "title": "Ordinary Day Turns Extraordinarily Unremarkable",
+      "correspondent": "Jordan Pat",
+      "publishedOn": "2023-07-17",
+      "summary": "In a twist that no one saw coming, today has been remarkably unremarkable. It's a day so ordinary, it's extraordinary in its own right. Dive into the story of how an average day made headlines for being perfectly mundane."
+    }
+  ]
+}

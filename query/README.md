@@ -51,6 +51,6 @@ General clean-ups, todos and things I wish to implement for this project:
 
 ## Reference
 
-* [*TanStack Query*](https://tanstack.com/query/latest/docs/react/overview)
+* [TanStack Query Docs](https://tanstack.com/query/latest/docs/react/overview)
   * This is a well-written library that solves (or works around?) how to query data in a React app. Ultimately this is
     a strong technical reference for what I'm trying to learn.

@@ -68,6 +68,13 @@ How do you query data in a React app? How do you avoid double `fetch` requests e
 See the README in [query/](query/).
 
 
+## `tanstack-query/`
+
+Example React program using [TanStack Query](https://tanstack.com/query/latest/docs/react/overview).
+
+See the README in [tanstack-query/](tanstack-query/).
+
+
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
@@ -80,7 +87,7 @@ General clean-ups, todos and things I wish to implement for this project:
   would free up this playground to focus on features of React itself (a much better fit).
 * [ ] Consider bringing back the core content of `flat-ui` but use React Table or a viable/idiomatic alternative, if
   it would make a useful reference.
-* [ ] IN PROGRESS "Synchronizing with an external system". These are the words React uses describe the purpose of the `useEffect` hook.
+* [ ] HOLD (Partially implemented but I'm holding off until I finish a TanStack Query example subproject) "Synchronizing with an external system". These are the words React uses describe the purpose of the `useEffect` hook.
   I already have an example I like of the `useEffect` hook, but it's in terms of misunderstanding the dependencies array
   and I want an example that's a little different. I'm struggling with the prototypical problem where, because I'm using
   `<React.StrictMode>`, and a `fetch` request, I'm getting two calls which is just wrong. What's the right way to do this?
@@ -88,3 +95,4 @@ General clean-ups, todos and things I wish to implement for this project:
   React/JavaScript is primitive at all). I've tried and failed to implement a [`useFetch` hook in another project](https://github.com/dgroomes/my-github-explorer/commit/a07cc9751d380594882eabb8d4a0734d570df00f#diff-8c1796409f2dc6b7d3584b5fe4249dd10e3ab35b5d8c90262a205497e48e269dL2)
   and that was too ambitious. So I want maybe a `query` subproject (and also I probably want a TanStack Query subproject
   for comparison and because that is a nice tool).
+* [x] DONE TanStack Query example very similar to the `query` subproject. 
