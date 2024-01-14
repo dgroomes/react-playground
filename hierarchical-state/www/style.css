@@ -1,0 +1,10 @@
+.dice-roll {
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+}
+
+.dice-roll-art {
+    font-family: monospace;
+    line-height: 1;
+}

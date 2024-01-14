@@ -38,8 +38,14 @@ Follow these instructions to build and serve the program:
 General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Scaffold the program
-* [ ] Make some hierarchical state thing and then can we reproduce the double fetching problem? And then solve it with
+* [ ] IN PROGRESS Make some hierarchical state thing and then can we reproduce the double fetching problem? And then solve it with
   "the right way" of doing state management in React?
+  * I don't think I need much of a hierarchy actually I think I'm more interested in a dynamic shape of the state. For
+    example, in some app you might have the user's profile information. This shape is known at design time. But as soon
+    as you have a list of things (non-primitives) then it's a little more interesting. Like open text editor tabs or
+    something.
+  * DONE. Turn the "lucky numbers" component into a "dice roll" component. This component will fetch from a mock
+    HTTP/JSON API using the mocked fetch, and it will show the roll value and have a re-roll button. 
 
 
 ## Reference
