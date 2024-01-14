@@ -1,10 +1,10 @@
-.dice-roll {
+.game-die-roll {
     text-align: center;
     margin: 20px;
     display: inline-block;
 }
 
-.dice-roll-art {
+.game-die-roll-art {
     font-family: monospace;
     line-height: 1;
 }

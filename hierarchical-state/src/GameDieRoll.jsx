@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { mockFetch as fetch } from "./mockFetch";
 
-const dieNumberToAsciiArt = {
+const gameDieNumberToAsciiArt = {
     1: `
 +-------+
 |       |
@@ -54,7 +54,10 @@ const loadingDieAsciiArt = `
 +-------+
 `;
 
-export function DiceRoll() {
+/**
+ * A game die ("die" as in dice 🎲). It can be re-rolled by clicking a button.
+ */
+export function GameDieRoll() {
     console.log("[DiceRoll] Render function invoked.");
     const [diceRoll, setDiceRoll] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -78,16 +81,16 @@ export function DiceRoll() {
 
     if (isLoading) {
         return (
-            <div className="dice-roll">
-                <pre className="dice-roll-art">{loadingDieAsciiArt}</pre>
+            <div className="game-die-roll">
+                <pre className="game-die-roll-art">{loadingDieAsciiArt}</pre>
                 <button disabled={true}>Rolling...</button>
             </div>
         );
     }
 
     return (
-        <div className="dice-roll">
-            <pre className="dice-roll-art">{dieNumberToAsciiArt[diceRoll]}</pre>
+        <div className="game-die-roll">
+            <pre className="game-die-roll-art">{gameDieNumberToAsciiArt[diceRoll]}</pre>
             <button onClick={rollDice}>Re-roll</button>
         </div>
     );

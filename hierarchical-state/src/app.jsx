@@ -1,25 +1,25 @@
 import React, {useCallback, useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import { DiceRoll } from './DiceRoll';
+import { GameDieRoll } from './GameDieRoll';
 
 
 function App() {
     const [diceCount, setDiceCount] = useState(1);
 
-    const addDice = useCallback(() => {
+    const addGameDieRoll = useCallback(() => {
         setDiceCount(diceCount + 1);
     }, [diceCount]);
 
-    const diceRolls = [];
+    const dice = [];
     for (let i = 0; i < diceCount; i++) {
-        diceRolls.push(<DiceRoll key={i}/>);
+        dice.push(<GameDieRoll key={i}/>);
     }
 
     return (
         <>
-            <button onClick={addDice}>Add Dice</button>
+            <button onClick={addGameDieRoll}>Add another roll 🎲</button>
             <hr/>
-            {diceRolls}
+            {dice}
         </>
     );
 }
