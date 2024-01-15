@@ -46,6 +46,10 @@ General clean-ups, todos and things I wish to implement for this project:
     something.
   * DONE. Turn the "lucky numbers" component into a "dice roll" component. This component will fetch from a mock
     HTTP/JSON API using the mocked fetch, and it will show the roll value and have a re-roll button. 
+  * DONE (pretty decent; this shows the double fetching problem) Show the fetch count. I tried abstracting a GameApiClientClient and other things but the demo was getting
+    out of scope. I think I want like a global fetchCount state or something. Should I set it via props or use the Context API?
+  * Fix the double fetching problem. I think I need to push state up out of the GameDieRoll component. Not really sure.
+    I'm hoping to find multiple ways to solve this problem.
 
 
 ## Reference

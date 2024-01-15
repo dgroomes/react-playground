@@ -8,3 +8,12 @@
     font-family: monospace;
     line-height: 1;
 }
+
+.statistics {
+    margin: 20px;
+    display: inline-block;
+
+    & * {
+        display: inline-block;
+    }
+}
