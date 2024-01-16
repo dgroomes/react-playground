@@ -50,6 +50,16 @@ General clean-ups, todos and things I wish to implement for this project:
     out of scope. I think I want like a global fetchCount state or something. Should I set it via props or use the Context API?
   * Fix the double fetching problem. I think I need to push state up out of the GameDieRoll component. Not really sure.
     I'm hoping to find multiple ways to solve this problem.
+* DONE Work around the double fetching problem using a ref via `useRef`. It's hard to say what the "right" thing is to do
+  here. The spirit of React's strict mode is to help you find problems. I appreciate that it [finds usages of deprecated
+  APIs](https://react.dev/reference/react/StrictMode#fixing-deprecation-warnings-enabled-by-strict-mode) and the double
+  render is interesting and I think reasonable. I find the [re-running effects feature](https://react.dev/reference/react/StrictMode#fixing-bugs-found-by-re-running-effects-in-development)
+  to be aggressive and odd. I get that it will help you to literally stop and think about your `useEffect` calls because of
+  the double logging (although I'm shocked that they even considered suppressing the double render logs from the console
+  using React DevTools). I don't think it directly helps you to realize that there is a clean-up facility of `useEffect`.
+  For now, I'm going to use `useRef` and lock it in as a working example. But at this point I'm curious if I can just
+  take all my effect-ful code out of React. Can I use React for just rendering (as original React intended?) and have
+  the "rest of my program" as an organic JavaScript program? 
 
 
 ## Reference

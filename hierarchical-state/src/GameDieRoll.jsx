@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import { mockFetch as fetch } from "./mockFetch";
+import React, {useEffect, useRef, useState} from "react";
+import {mockFetch as fetch} from "./mockFetch";
 
 const gameDieNumberToAsciiArt = {
     1: `
@@ -60,7 +60,10 @@ const loadingDieAsciiArt = `
 export function GameDieRoll(props) {
     console.log("[GameDieRoll] Render function invoked.");
     const [gameDieRoll, setGameDieRoll] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    // This is a hack to make sure that we only kick off one fetch request for the game die roll. React's strict mode
+    // triggers the effect twice and I would rather not make two fetch requests.
+    const fetchRef = useRef(null);
 
     // This isn't right, I can't use this as a click handler because it basically makes a fetch outside of a useEffect
     // callback, right? Again, I'm not sure how to do basic React programming.
@@ -68,7 +71,7 @@ export function GameDieRoll(props) {
         props.incrementFetchCount();
         setIsLoading(true);
         console.log("[GameDieRoll] `useEffect` callback invoked. Making a 'fetch' request.");
-        fetch('/dice-roll')
+        fetchRef.current = fetch('/dice-roll')
             .then(response => {
                 console.log("[GameDieRoll] `fetch` received a response.");
                 return response.json();
@@ -79,7 +82,9 @@ export function GameDieRoll(props) {
             });
     };
 
-    useEffect(rollDice, []); // Empty dependency array ensures this runs once on mount and not on every render
+    useEffect(() => {
+        if (fetchRef.current === null) rollDice();
+    }, []);
 
     if (isLoading) {
         return (
