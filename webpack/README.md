@@ -32,15 +32,17 @@ Here are some elements I need to remember about "how to create a React + TypeScr
 
 Follow these instructions to build and run the project.
 
-1. Install dependencies
+1. Pre-requisite: Node.js
+    * I used version 20.17.0
+2. Install dependencies
     * ```shell
       npm install
       ```
-2. Build the project:
+3. Build the project:
     * ```shell
       npm run build
       ```
-3. Alternatively, build the project continuously and serve the output:
+4. Alternatively, build the project continuously and serve the output:
     * ```shell
       npm start
       ```

@@ -55,6 +55,8 @@ Follow these instructions to build and serve the program:
 General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE Scaffold the app. The app suffers from the infamous "double fetch problem" caused by `<React.StrictMode>`.
+* [ ] Use the "fetch-on-render" and "render-as-you-fetch" language to describe the problem and alternatives. I think
+  this example is a good fit for this discussion.
 
 
 ## Reference
