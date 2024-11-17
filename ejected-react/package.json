@@ -11,6 +11,6 @@
     "esbuild": "~0.19.11"
   },
   "scripts": {
-    "start": "esbuild src/index.jsx --servedir=www --outdir=www/js --bundle --serve=[::1]:8000"
+    "start": "esbuild src/index.jsx --sourcemap --servedir=www --outdir=www/js --bundle --serve=[::1]:8000"
   }
 }

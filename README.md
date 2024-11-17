@@ -80,7 +80,7 @@ See the README in [tanstack-query/](tanstack-query/).
 General clean-ups, todos and things I wish to implement for this project:
 
 * [x] DONE (although I'm not pursuing it because it doesn't support SSG) Consider creating a [Deno Fresh](https://github.com/denoland/fresh) example project. I like what Deno has accomplished
-  and where it's going and I was pleasantly surprised to see that Fresh is branded with a 1.x release. I generally am
+  and where it's going, and I was pleasantly surprised to see that Fresh is branded with a 1.x release. I generally am
   cautious about adopting 0.x software at face value but that's not a hard rule.
 * [ ] Consider moving my Next.js playground to here. Or rather, moving all the "toolchain" example projects out of here
   and into a new project called something like `react-toolchain-playground`. That would be a big playground, and also it

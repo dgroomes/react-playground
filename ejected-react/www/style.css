@@ -11,9 +11,9 @@
 
 .statistics {
     margin: 20px;
-    display: inline-block;
+}
 
-    & * {
-        display: inline-block;
-    }
+.statistics pre {
+    margin: 0;
+    display: inline-block;
 }
