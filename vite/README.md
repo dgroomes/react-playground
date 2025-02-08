@@ -16,7 +16,7 @@ related [Gradle feature request](https://github.com/gradle/gradle/issues/1686).
 Follow these instructions to build and serve the app:
 
 1. Pre-requisite: Node.js
-   * I used version 18.16.0
+   * I used version 20.17.0
 2. Install dependencies:
    * ```shell
      npm install
@@ -51,6 +51,9 @@ General clean-ups, todos and things I wish to implement for this project:
     frustrating the npm page only has 3.x and the GitHub repo only has 3.x releases. I'm assuming there existed a 2.x
     line, but I can't even find the 1.x line release notes. I'll jump straight to 3.x when I upgrade to Vite 4.
 * [x] DONE Upgrade to Vite 4.x.
+* [x] DONE Upgrade to Vite 5.x
+   * <https://v5.vite.dev/guide/migration.html>
+* [ ] Upgrade to Vite 6.x
 
 
 ## Reference
