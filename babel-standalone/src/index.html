@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>react-playground/babel-standalone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- These divs are the placeholders for HTML created dynamically from JavaScript (React, handwritten JS, etc.) -->
+    <div id="root"></div>
+
+    <!--
+    When you want to upgrade the versions of these libraries, find their latest releases at these places:
+
+    React: https://github.com/facebook/react/blob/main/CHANGELOG.md
+    Babel: https://github.com/babel/babel/releases
+
+    You will also want to visit "unpkg" to get the exact version values and use https://www.srihash.org to generate the
+    integrity hash.
+    -->
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.26.7/babel.min.js" integrity="sha384-cYL2pWrI/RNVfxzYY06uSl3BJAjh5weypqTUJdwvEGHgB1dxQ8XF4A6BXvvXlxuY" crossorigin="anonymous"></script>
+    <!-- Use Babel to *load* (and transpile) JSX source code. We are using in-browser JSX (no build step)! This works
+     because we have loaded the "babel/standalone" library and have specified the source type of "text/babel" in the
+     script tag. The browser will key off the "text/babel" type and then hook into the Babel standalone component to
+     transpile the JSX source code into browser compatible JS source code. Then, the browser will load and
+     execute that JS source code. Pretty cool!
+    -->
+    <script type="text/babel" src="app.jsx"></script>
+  </body>
+</html>
