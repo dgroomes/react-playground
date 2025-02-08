@@ -53,7 +53,7 @@ General clean-ups, todos and things I wish to implement for this project:
 * [x] DONE Upgrade to Vite 4.x.
 * [x] DONE Upgrade to Vite 5.x
    * <https://v5.vite.dev/guide/migration.html>
-* [ ] Upgrade to Vite 6.x
+* [x] DONE Upgrade to Vite 6.x
 
 
 ## Reference
