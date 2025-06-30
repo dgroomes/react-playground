@@ -2,16 +2,13 @@
   "name": "react-playground_esbuild",
   "private": true,
   "dependencies": {
-    "antd": "^5.11.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "start": "node serve.mjs"
+    "antd": "5.26.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.36",
-    "@types/react-dom": "^18.2.14",
-    "esbuild": "^0.19.5"
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "esbuild": "0.25.5"
   }
 }

@@ -32,7 +32,7 @@ Follow these instructions to build and serve the program:
       ```
 2. Serve the content (and build continuously)
     * ```shell
-      npm start
+      node serve.mjs
       ```
 3. Open the browser
     * Open <http://[::1]:8080>
