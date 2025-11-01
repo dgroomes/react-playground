@@ -26,7 +26,7 @@ double `fetch` requests because the design of the program is too naive.
 Follow these instructions to build and serve the program:
 
 1. Pre-requisite: Node.js
-   * I used version 20.11.0
+   * I used version 23.7.0
 2. Install the dependencies
     * ```shell
       npm install
