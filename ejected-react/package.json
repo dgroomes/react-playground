@@ -2,13 +2,13 @@
   "name": "react-playground_hierarchical-state",
   "private": true,
   "dependencies": {
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0"
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@types/react": "~18.2.47",
-    "@types/react-dom": "~18.2.18",
-    "esbuild": "~0.19.11"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "esbuild": "0.25.11"
   },
   "scripts": {
     "start": "esbuild src/index.jsx --sourcemap --servedir=www --outdir=www/js --bundle --serve=[::1]:8000"
