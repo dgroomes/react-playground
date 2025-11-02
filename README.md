@@ -19,32 +19,12 @@ re-using the code.
 The subprojects include:
 
 
-## `babel-standalone/`
+## `ejected-react/`
 
-A *zero-build-step* React project implemented with Babel's in-browser compiler `@babel/standalone`. This is React *the CDN way*.
+An example program that largely *ejects* from React. Let's use React as a rendering library and not a framework. This demonstrates
+using React for rendering while managing state and side effects outside of React's hooks system.
 
-See the README in [babel-standalone/](babel-standalone/).
-
-
-## `vite/`
-
-A React project built with [Vite](https://vitejs.dev/). It features TypeScript.
-
-See the README in [vite/](vite/).
-
-
-## `webpack/`
-
-A React project built with [webpack](https://webpack.js.org/). It features TypeScript and `ts-loader`.
-
-See the README in [webpack/](webpack/).
-
-
-## `esbuild/`
-
-A bare-bones React and TypeScript project built with [esbuild](https://esbuild.github.io/).
-
-See the README in [esbuild/](esbuild/).
+See the README in [ejected-react/](ejected-react/).
 
 
 ## `raw-html/`
@@ -82,9 +62,8 @@ General clean-ups, todos and things I wish to implement for this project:
 * [x] DONE (although I'm not pursuing it because it doesn't support SSG) Consider creating a [Deno Fresh](https://github.com/denoland/fresh) example project. I like what Deno has accomplished
   and where it's going, and I was pleasantly surprised to see that Fresh is branded with a 1.x release. I generally am
   cautious about adopting 0.x software at face value but that's not a hard rule.
-* [ ] Consider moving my Next.js playground to here. Or rather, moving all the "toolchain" example projects out of here
-  and into a new project called something like `react-toolchain-playground`. That would be a big playground, and also it
-  would free up this playground to focus on features of React itself (a much better fit).
+* [x] DONE Moved toolchain example projects (babel-standalone, vite, webpack, esbuild) to a separate `react-toolchains-playground`
+  repository. This playground now focuses on features of React itself.
 * [ ] Consider bringing back the core content of `flat-ui` but use React Table or a viable/idiomatic alternative, if
   it would make a useful reference.
 * [ ] HOLD (Partially implemented but I'm holding off until I finish a TanStack Query example subproject) "Synchronizing with an external system". These are the words React uses describe the purpose of the `useEffect` hook.
@@ -95,4 +74,5 @@ General clean-ups, todos and things I wish to implement for this project:
   React/JavaScript is primitive at all). I've tried and failed to implement a [`useFetch` hook in another project](https://github.com/dgroomes/my-github-explorer/commit/a07cc9751d380594882eabb8d4a0734d570df00f#diff-8c1796409f2dc6b7d3584b5fe4249dd10e3ab35b5d8c90262a205497e48e269dL2)
   and that was too ambitious. So I want maybe a `query` subproject (and also I probably want a TanStack Query subproject
   for comparison and because that is a nice tool).
-* [x] DONE TanStack Query example very similar to the `query` subproject. 
+* [x] DONE TanStack Query example very similar to the `query` subproject.
+* [ ] React Server Components
