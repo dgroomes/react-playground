@@ -33,7 +33,7 @@ Here are some elements I need to remember about "how to create a React + TypeScr
 Follow these instructions to build and run the project.
 
 1. Pre-requisite: Node.js
-    * I used version 20.17.0
+    * I used version 23.7.0
 2. Install dependencies
     * ```shell
       npm install
