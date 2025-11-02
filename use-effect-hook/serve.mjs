@@ -19,10 +19,10 @@ const ctx = await esbuild.context({
     sourcemap: "linked"
 });
 
-const {host, port} = await ctx.serve({
+const {hosts, port} = await ctx.serve({
     servedir: 'www',
     host: '::1',
     port: 8080
 });
 
-console.log("Serving on http://[%s]:%d", host, port)
+console.log("Serving on http://[%s]:%d", hosts[0], port)

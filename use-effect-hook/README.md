@@ -15,14 +15,14 @@ it).
 Follow these instructions to build and serve the program:
 
 1. Pre-requisite: Node.js
-    * I used version 20.17.0
+    * I used version 23.7.0
 2. Install the dependencies
     * ```shell
       npm install
       ```
 3. Serve the content (and build continuously)
     * ```shell
-      npm start
+      node serve.mjs
       ```
 4. Open the browser
     * Open <http://[::1]:8080>
