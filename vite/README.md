@@ -16,14 +16,14 @@ related [Gradle feature request](https://github.com/gradle/gradle/issues/1686).
 Follow these instructions to build and serve the app:
 
 1. Pre-requisite: Node.js
-   * I used version 20.17.0
+   * I used version 23.7.0
 2. Install dependencies:
    * ```shell
      npm install
      ```
 3. Run the server:
    * ```shell
-     npm run dev
+     npx vite
      ```
 4. Open the browser:
    * <http://localhost:5173/>
@@ -54,6 +54,7 @@ General clean-ups, todos and things I wish to implement for this project:
 * [x] DONE Upgrade to Vite 5.x
    * <https://v5.vite.dev/guide/migration.html>
 * [x] DONE Upgrade to Vite 6.x
+* [x] DONE Upgrade to Vite 7.x
 
 
 ## Reference
