@@ -2,13 +2,13 @@
   "name": "react-playground_esbuild",
   "private": true,
   "dependencies": {
-    "antd": "5.26.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "antd": "5.28.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "esbuild": "0.25.5"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "esbuild": "0.25.11"
   }
 }
