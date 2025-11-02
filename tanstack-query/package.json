@@ -3,14 +3,14 @@
   "description": "Incorporate raw HTML into a React app.",
   "private": true,
   "dependencies": {
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0"
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@types/react": "~18.2.47",
-    "@types/react-dom": "~18.2.18",
-    "esbuild": "~0.19.11",
-    "@tanstack/react-query": "~5.17.10"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "esbuild": "0.25.11",
+    "@tanstack/react-query": "5.90.6"
   },
   "scripts": {
     "start": "esbuild src/app.jsx --servedir=www --outdir=www/js --bundle --serve=[::1]:8000"
