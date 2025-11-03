@@ -55,6 +55,13 @@ Example React program using [TanStack Query](https://tanstack.com/query/latest/d
 See the README in [tanstack-query/](tanstack-query/).
 
 
+## `rsc/`
+
+A minimal Hello World example of React Server Components from first principles, without using a meta-framework like Next.js.
+
+See the README in [rsc/](rsc/).
+
+
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
@@ -75,4 +82,4 @@ General clean-ups, todos and things I wish to implement for this project:
   and that was too ambitious. So I want maybe a `query` subproject (and also I probably want a TanStack Query subproject
   for comparison and because that is a nice tool).
 * [x] DONE TanStack Query example very similar to the `query` subproject.
-* [ ] React Server Components
+* [x] DONE React Server Components
