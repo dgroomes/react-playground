@@ -1,58 +1,20 @@
-'use client';
+import React from 'react';
 
-// The 'use client' directive marks this as a Client Component
-// This component CAN use hooks, event handlers, and browser APIs
-
-import React, { useState } from 'react';
-
-export default function ClientComponent({ initialCount }) {
-  const [count, setCount] = useState(initialCount);
-
+// In a full RSC setup, this would have 'use client' and be hydrated
+// For this minimal SSG example, it just renders statically
+export default function ClientComponent({ initialValue }) {
   return (
-    <div style={{
-      backgroundColor: '#fff3e0',
-      padding: '15px',
-      borderRadius: '8px'
-    }}>
+    <div className="client">
       <h2>⚡ Client Component</h2>
-      <p><strong>This component runs on the CLIENT (browser).</strong></p>
-      <p>Initial count from server: {initialCount}</p>
-      <p>Current count: {count}</p>
-
-      <button
-        onClick={() => setCount(count + 1)}
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          backgroundColor: '#ff9800',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          marginRight: '10px'
-        }}
-      >
-        Increment
-      </button>
-
-      <button
-        onClick={() => setCount(initialCount)}
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          backgroundColor: '#757575',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px'
-        }}
-      >
-        Reset
-      </button>
-
-      <p style={{ fontSize: '14px', color: '#666', marginTop: '10px' }}>
-        ℹ️ This component has interactive state (useState) and event handlers.
-        It's hydrated in the browser and can respond to user interactions.
+      <p><strong>Initial value from server: {initialValue}</strong></p>
+      <p style={{ fontSize: '14px', color: '#666' }}>
+        ℹ️ In a full RSC setup, this would be marked with 'use client'
+        and hydrated in the browser with useState/onClick handlers.
+        For this minimal SSG example, it's rendered statically.
+      </p>
+      <p style={{ fontSize: '14px', color: '#666' }}>
+        The key RSC feature this demo shows: async Server Components
+        that run at build time!
       </p>
     </div>
   );
