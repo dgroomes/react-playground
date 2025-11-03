@@ -4,10 +4,13 @@
   "type": "module",
   "description": "Minimal React Server Components SSG example",
   "scripts": {
-    "build": "node build.js"
+    "build": "tsx build.js"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
 }
