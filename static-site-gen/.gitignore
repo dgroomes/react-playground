@@ -1,11 +1,3 @@
-# Dependencies
 node_modules/
-bun.lock
-
-# Generated files
 portfolio.html
-portfolio.md
-portfolio-jsx.md
-
-# Debug files
-debug-jsx.jsx
+/bun.lock
