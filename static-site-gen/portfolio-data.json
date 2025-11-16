@@ -1,0 +1,39 @@
+{
+  "name": "Jane Developer",
+  "title": "Full Stack Software Engineer",
+  "bio": "Passionate about building elegant solutions to complex problems. Experienced in React, Node.js, and cloud architecture.",
+  "contact": {
+    "email": "jane@example.com",
+    "github": "github.com/jane-dev",
+    "linkedin": "linkedin.com/in/jane-developer"
+  },
+  "projects": [
+    {
+      "name": "React Static Site Generator",
+      "description": "A minimal static site generator using only React and Bun",
+      "tech": ["React", "Bun", "JavaScript"],
+      "url": "github.com/jane-dev/react-ssg"
+    },
+    {
+      "name": "Data Visualization Dashboard",
+      "description": "Interactive dashboard for visualizing complex datasets",
+      "tech": ["React", "D3.js", "PostgreSQL"],
+      "url": "github.com/jane-dev/viz-dashboard"
+    },
+    {
+      "name": "API Gateway Service",
+      "description": "High-performance API gateway with rate limiting and authentication",
+      "tech": ["Node.js", "Redis", "Docker"],
+      "url": "github.com/jane-dev/api-gateway"
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Docker",
+    "AWS"
+  ]
+}
