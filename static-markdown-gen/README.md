@@ -42,7 +42,9 @@ General clean-ups, todos and things I wish to implement for this project:
   constructs. 
 - [x] DONE Remove React. This has nothing to do with React. It turns out it's more a JSX example.
 - [ ] Remove this from `react-playground`. 
-- [ ] Use a proper markdown AST library and serializer to construct the markdown document instead of string concatenation.
+- [ ] IN PROGRESS Use a proper markdown AST library and serializer to construct the markdown document instead of string concatenation.
+   - DONE First draft (thanks LLM)
+   - Make sense of it. I don't need to support all these element types.
 
 
 ## Reference

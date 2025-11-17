@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "md",
+    "jsxFragmentFactory": "Fragment",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["bun-types"]
+  }
+}
