@@ -1,5 +1,5 @@
-import React from 'react@19.2.0';
-import { renderToStaticMarkup } from 'react-dom@19.2.0/server';
+import * as React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { readFileSync, writeFileSync } from 'fs';
 
 interface Project {
