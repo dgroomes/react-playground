@@ -1,6 +1,21 @@
-import React from 'react';
+import React from 'react@19.2.0';
+import { renderToStaticMarkup } from 'react-dom@19.2.0/server';
+import { readFileSync, writeFileSync } from 'fs';
 
-export function Portfolio({ data }) {
+interface Project {
+  name: string;
+  description: string;
+  tech: string[];
+}
+
+interface PortfolioData {
+  name: string;
+  title: string;
+  projects: Project[];
+  skills: string[];
+}
+
+function Portfolio({ data }: { data: PortfolioData }) {
   return (
     <html lang="en">
       <head>
@@ -35,3 +50,19 @@ export function Portfolio({ data }) {
     </html>
   );
 }
+
+// Read portfolio data
+const portfolioData: PortfolioData = JSON.parse(
+  readFileSync('./portfolio-data.json', 'utf-8')
+);
+
+// Render the React component to static HTML
+const html = renderToStaticMarkup(<Portfolio data={portfolioData} />);
+
+// Add DOCTYPE (renderToStaticMarkup doesn't include it)
+const fullHtml = `<!DOCTYPE html>\n${html}`;
+
+// Write to file
+writeFileSync('./portfolio.html', fullHtml);
+
+console.log('✓ Generated portfolio.html');
