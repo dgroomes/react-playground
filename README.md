@@ -55,6 +55,20 @@ Example React program using [TanStack Query](https://tanstack.com/query/latest/d
 See the README in [tanstack-query/](tanstack-query/).
 
 
+## `static-site-gen/`
+
+Static site generation (SSG) in pure React.
+
+See the README in [static-site-gen/](static-site-gen/).
+
+
+## `static-markdown-gen/`
+
+Generate Markdown from JSX using a custom renderer.
+
+See the README in [static-markdown-gen/](static-markdown-gen/).
+
+
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
@@ -76,3 +90,4 @@ General clean-ups, todos and things I wish to implement for this project:
   for comparison and because that is a nice tool).
 * [x] DONE TanStack Query example very similar to the `query` subproject.
 * [ ] React Server Components
+* [x] DONE Static site generation
