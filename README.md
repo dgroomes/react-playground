@@ -90,4 +90,4 @@ General clean-ups, todos and things I wish to implement for this project:
   for comparison and because that is a nice tool).
 * [x] DONE TanStack Query example very similar to the `query` subproject.
 * [ ] React Server Components
-* [x] DONE Static site generation with React 19
+* [x] DONE Static site generation
