@@ -5,11 +5,11 @@ Generate Markdown from JSX using a custom renderer.
 
 ## Overview
 
-React's `renderToStaticMarkup` converts JSX to HTML. This example applies the same concept but outputs Markdown instead
-of HTML. It uses a custom JSX factory function and renderer that interprets JSX elements as Markdown constructs.
+This example demonstrates how to use JSX syntax to generate Markdown output instead of HTML. It uses a custom JSX
+factory function and renderer that interprets JSX elements as Markdown constructs.
 
 For example, `<h2>` becomes `##`, `<strong>` becomes `**bold**`, and `<ul><li>` becomes bullet lists. This lets you
-write React-style components that generate Markdown files instead of HTML.
+write JSX-style components that generate Markdown files without using React.
 
 
 ## Instructions
@@ -18,15 +18,11 @@ Follow these instructions to generate Markdown:
 
 1. Pre-requisite: Bun
    * I used version 1.3.2
-2. Install dependencies
+2. Generate the Markdown file
    * ```shell
-     bun install
+     bun main.tsx
      ```
-3. Generate the Markdown file
-   * ```shell
-     bun main.jsx
-     ```
-4. View the output
+3. View the output
    * Open `portfolio.md` in a text editor or Markdown viewer
    * The file is a well-formatted Markdown document
 
@@ -42,10 +38,13 @@ this tree and converts each element type to its Markdown equivalent.
 
 General clean-ups, todos and things I wish to implement for this project:
 
-- [ ] Clean up the AI slop. Using HTML elements like `article` and `section` is not what I had in mind. I want only Markdown
-  constructs. Also, can I make the renderer more idiomatic? Should/can I use a proper Markdown AST library? I'd like to.
+- [x] DONE (well partially) Clean up the AI slop. Using HTML elements like `article` and `section` is not what I had in mind. I want only Markdown
+  constructs. 
+- [x] DONE Remove React. This has nothing to do with React. It turns out it's more a JSX example.
+- [ ] Remove this from `react-playground`. 
+- [ ] Use a proper markdown AST library and serializer to construct the markdown document instead of string concatenation.
 
 
 ## Reference
 
-* [React Docs: *renderToStaticMarkup*](https://react.dev/reference/react-dom/server/renderToStaticMarkup)
+* [TypeScript JSX](https://www.typescriptlang.org/docs/handbook/jsx.html)

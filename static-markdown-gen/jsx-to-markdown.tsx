@@ -1,6 +1,17 @@
-// Custom JSX renderer for markdown output
+// JSX factory function for creating markdown-aware element trees
 
-export function renderToMarkdown(element) {
+export function md(type, props, ...children) {
+  const flatChildren = children.flat(Infinity).filter(child => child !== null && child !== undefined);
+
+  return {
+    type,
+    props: props || {},
+    children: flatChildren
+  };
+}
+
+// Custom JSX renderer for markdown output
+export function renderToMarkdown(element): string {
   if (element === null || element === undefined) {
     return '';
   }
@@ -13,7 +24,7 @@ export function renderToMarkdown(element) {
     return element.map(renderToMarkdown).join('');
   }
 
-  if (typeof element === 'object' && (element.type || element.$$typeof)) {
+  if (typeof element === 'object' && element.type) {
     const type = element.type;
     const props = element.props || {};
 
@@ -46,20 +57,14 @@ export function renderToMarkdown(element) {
       case 'li':
         return `- ${childrenMd}\n`;
 
-      case 'section':
-        if (props.title) {
-          return `## ${props.title}\n\n${childrenMd}`;
-        }
-        return childrenMd;
-
-      case 'article':
-        return `${childrenMd}\n`;
-
       case 'strong':
         return `**${childrenMd}**`;
 
       case 'hr':
         return `---\n\n`;
+
+      case 'fragment':
+        return childrenMd;
 
       default:
         return childrenMd;

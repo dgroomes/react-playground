@@ -1,8 +1,5 @@
 {
   "name": "static-markdown-gen",
   "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "react": "19.2.0"
-  }
+  "type": "module"
 }
