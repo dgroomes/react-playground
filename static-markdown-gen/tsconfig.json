@@ -1,11 +1,37 @@
 {
   "compilerOptions": {
+    // jsx: "react" - Transform JSX using a function call pattern (createElement style)
+    // We use "react" mode (not "preserve" or "react-jsx") because we want the classic
+    // React.createElement(type, props, children) pattern, which our custom factory can intercept.
     "jsx": "react",
+
+    // jsxFactory: "md" - Use our custom 'md' function instead of React.createElement
+    // This tells TypeScript to transform <h1>text</h1> into md("h1", null, "text")
+    // Our md() function then creates mdast AST nodes instead of React elements.
     "jsxFactory": "md",
+
+    // jsxFragmentFactory: "Fragment" - Use our Fragment symbol for <>...</> syntax
+    // This tells TypeScript to transform <>children</> into md(Fragment, null, children)
+    // Our Fragment symbol allows grouping elements without creating a wrapper node.
     "jsxFragmentFactory": "Fragment",
+
+    // module: "ESNext" - Use modern ES modules (import/export)
+    // This is required because our package.json has "type": "module" and we use
+    // import/export syntax throughout the codebase.
     "module": "ESNext",
+
+    // target: "ESNext" - Compile to modern JavaScript features
+    // Bun supports all modern JS features natively, so no need to transpile down
+    // to older JavaScript versions (like ES5 or ES2015).
     "target": "ESNext",
+
+    // moduleResolution: "bundler" - Use bundler-style module resolution
+    // This is the modern resolution strategy for bundlers like Bun, Vite, and esbuild.
+    // It handles bare imports (like "mdast-util-to-markdown") and file extensions correctly.
     "moduleResolution": "bundler",
+
+    // types: ["bun-types"] - Include Bun's TypeScript type definitions
+    // Provides types for Bun's global APIs, built-in modules, and runtime features.
     "types": ["bun-types"]
   }
 }
