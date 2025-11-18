@@ -1,15 +1,26 @@
 # static-markdown-gen
 
-Generate Markdown from JSX using a custom renderer.
+Generate Markdown from JSX using a custom Markdown-aware renderer.
 
 
 ## Overview
 
-This example demonstrates how to use JSX syntax to generate Markdown output instead of HTML. It uses a custom JSX
-factory function and renderer that interprets JSX elements as Markdown constructs.
+JSX is an ergonomic way to template HTML, but we can also use it to generate other document formats like Markdown.
+This project shows how to do this by creating a custom JSX factory function and renderer that outputs Markdown
+instead of HTML.
 
-For example, `<h2>` becomes `##`, `<strong>` becomes `**bold**`, and `<ul><li>` becomes bullet lists. This lets you
-write JSX-style components that generate Markdown files without using React.
+Templating tools like [Handlebars](https://github.com/handlebars-lang/handlebars.js) and [mustache.js](https://github.com/janl/mustache.js)
+are a popular choice for templating HTML and other text-based formats. These tools are HTML-aware, and will escape any
+HTML special characters in the output. However, they aren't aware of Markdown.
+
+This project uses libraries from the [unified](https://github.com/unifiedjs) ecosystem to programmatically build
+a Markdown AST and serialize it to a Markdown string. This has the advantage that Markdown special characters are
+properly escaped when embedded in a conflicting context. For example, you should be able to use bold a piece of text
+that has asterisks in it without having to think about escaping those asterisks yourself.
+
+The JSX pragma `/** @jsx md */` tells the transpiler to use a custom factory function instead of React's `createElement`.
+The `md` function creates a tree of objects representing the JSX structure. The `renderToMarkdown` function then walks
+this tree and converts each element type to its Markdown equivalent.
 
 
 ## Instructions
@@ -27,13 +38,6 @@ Follow these instructions to generate Markdown:
    * The file is a well-formatted Markdown document
 
 
-## How It Works
-
-The JSX pragma `/** @jsx md */` tells the transpiler to use a custom factory function instead of React's `createElement`.
-The `md` function creates a tree of objects representing the JSX structure. The `renderToMarkdown` function then walks
-this tree and converts each element type to its Markdown equivalent.
-
-
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
@@ -44,7 +48,7 @@ General clean-ups, todos and things I wish to implement for this project:
 - [ ] Remove this from `react-playground`. 
 - [ ] IN PROGRESS Use a proper markdown AST library and serializer to construct the markdown document instead of string concatenation.
    - DONE First draft (thanks LLM)
-   - Make sense of it. I don't need to support all these element types.
+   - IN PROGRESS Make sense of it. I don't need to support all these element types.
 
 
 ## Reference
