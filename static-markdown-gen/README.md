@@ -15,12 +15,14 @@ HTML special characters in the output. However, they aren't aware of Markdown.
 
 This project uses libraries from the [unified](https://github.com/unifiedjs) ecosystem to programmatically build
 a Markdown AST and serialize it to a Markdown string. This has the advantage that Markdown special characters are
-properly escaped when embedded in a conflicting context. For example, you should be able to use bold a piece of text
-that has asterisks in it without having to think about escaping those asterisks yourself.
+properly escaped when embedded in a conflicting context. For example, you should be able to bold a piece of text that
+has asterisks in it without having to think about escaping those asterisks yourself.
 
 The JSX pragma `/** @jsx md */` tells the transpiler to use a custom factory function instead of React's `createElement`.
 The `md` function creates a tree of objects representing the JSX structure. The `renderToMarkdown` function then walks
 this tree and converts each element type to its Markdown equivalent.
+
+This is only a toy example: it is neither comprehensive nor robust.
 
 
 ## Instructions
@@ -46,9 +48,9 @@ General clean-ups, todos and things I wish to implement for this project:
   constructs. 
 - [x] DONE Remove React. This has nothing to do with React. It turns out it's more a JSX example.
 - [ ] Remove this from `react-playground`. 
-- [ ] IN PROGRESS Use a proper markdown AST library and serializer to construct the markdown document instead of string concatenation.
+- [x] DONE Use a proper markdown AST library and serializer to construct the Markdown document instead of string concatenation.
    - DONE First draft (thanks LLM)
-   - IN PROGRESS Make sense of it. I don't need to support all these element types.
+   - DONE (OK I mostly get it) Make sense of it. I don't need to support all these element types.
 
 
 ## Reference

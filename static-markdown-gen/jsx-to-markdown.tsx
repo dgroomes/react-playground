@@ -1,3 +1,5 @@
+// NOTE: This is mostly AI generated. Couldn't do it myself with a ton of effort. But I knew it was possible.
+//
 // JSX-to-Markdown renderer using mdast AST library
 // This provides a custom JSX factory that creates mdast nodes instead of React elements
 
@@ -10,9 +12,11 @@ export const Fragment = Symbol('Fragment');
 // Convert primitives (strings, numbers, booleans) to mdast text nodes
 // Pass through any existing mdast nodes unchanged
 function toText(child: any) {
-  return typeof child === 'string' || typeof child === 'number' || typeof child === 'boolean'
-    ? { type: 'text', value: String(child) }
-    : child;
+  if (typeof child === 'string' || typeof child === 'number' || typeof child === 'boolean') {
+    return { type: 'text', value: String(child) };
+  }
+
+  return child;
 }
 
 // Flatten nested arrays, filter out null/undefined, and convert primitives to text nodes
@@ -20,8 +24,10 @@ function processChildren(children: any[]): any[] {
   return children.flat(Infinity).filter(c => c != null).map(toText);
 }
 
-// JSX factory function - called by TypeScript for every JSX element
-// Transforms <element>children</element> into md('element', props, ...children)
+// JSX factory function called for every element in the code transformed from the original JSX.
+//
+// For example: <element>children</element> is transformed into md('element', props, ...children) and this is the 'md'
+// function.
 export function md(type: string | symbol, props: any, ...children: any[]) {
   // Fragments just return their children without a wrapper
   if (type === Fragment || type === 'fragment') return processChildren(children);
