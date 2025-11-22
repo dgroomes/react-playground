@@ -1,75 +1,78 @@
-// JSX factory function for creating markdown-aware element trees
+// NOTE: This is mostly AI generated. Couldn't do it myself with a ton of effort. But I knew it was possible.
+//
+// JSX-to-Markdown renderer using mdast AST library
+// This provides a custom JSX factory that creates mdast nodes instead of React elements
 
-export function md(type, props, ...children) {
-  const flatChildren = children.flat(Infinity).filter(child => child !== null && child !== undefined);
+import type { Root, Content, PhrasingContent } from 'mdast';
+import { toMarkdown } from 'mdast-util-to-markdown';
 
-  return {
-    type,
-    props: props || {},
-    children: flatChildren
-  };
+// Fragment symbol - allows grouping JSX elements without a wrapper: <>...</>
+export const Fragment = Symbol('Fragment');
+
+// Convert primitives (strings, numbers, booleans) to mdast text nodes
+// Pass through any existing mdast nodes unchanged
+function toText(child: any) {
+  if (typeof child === 'string' || typeof child === 'number' || typeof child === 'boolean') {
+    return { type: 'text', value: String(child) };
+  }
+
+  return child;
 }
 
-// Custom JSX renderer for markdown output
-export function renderToMarkdown(element): string {
-  if (element === null || element === undefined) {
-    return '';
+// Flatten nested arrays, filter out null/undefined, and convert primitives to text nodes
+function processChildren(children: any[]): any[] {
+  return children.flat(Infinity).filter(c => c != null).map(toText);
+}
+
+// JSX factory function called for every element in the code transformed from the original JSX.
+//
+// For example: <element>children</element> is transformed into md('element', props, ...children) and this is the 'md'
+// function.
+export function md(type: string | symbol, props: any, ...children: any[]) {
+  // Fragments just return their children without a wrapper
+  if (type === Fragment || type === 'fragment') return processChildren(children);
+
+  const kids = processChildren(children);
+
+  // <document title="..."> creates a mdast Root node with optional title as H1
+  if (type === 'document') {
+    return {
+      type: 'root',
+      children: props?.title
+        ? [{ type: 'heading', depth: 1, children: [{ type: 'text', value: props.title }] }, ...kids]
+        : kids
+    };
   }
 
-  if (typeof element === 'string' || typeof element === 'number' || typeof element === 'boolean') {
-    return String(element);
+  // <h1> through <h6> become mdast heading nodes with depth 1-6
+  if (type.match(/^h[1-6]$/)) {
+    return { type: 'heading', depth: parseInt(type[1]), children: kids };
   }
 
-  if (Array.isArray(element)) {
-    return element.map(renderToMarkdown).join('');
-  }
+  // Map JSX elements to their mdast equivalents
+  if (type === 'p') return { type: 'paragraph', children: kids };
+  if (type === 'ul') return { type: 'list', ordered: false, children: kids };
+  if (type === 'ol') return { type: 'list', ordered: true, children: kids };
+  if (type === 'li') return { type: 'listItem', children: kids };
+  if (type === 'strong') return { type: 'strong', children: kids };
+  if (type === 'hr') return { type: 'thematicBreak' };
 
-  if (typeof element === 'object' && element.type) {
-    const type = element.type;
-    const props = element.props || {};
+  // Unknown elements just return their children
+  return kids;
+}
 
-    const children = element.children || props.children;
-    const childrenArray = Array.isArray(children) ? children : (children ? [children] : []);
-    const childrenMd = childrenArray.map(renderToMarkdown).join('');
+// Serialize mdast AST to markdown string using mdast-util-to-markdown
+// This library handles all the complexity of proper markdown formatting and escaping
+export function renderToMarkdown(element: any): string {
+  // Root nodes can be serialized directly
+  if (element?.type === 'root') return toMarkdown(element as Root);
 
-    switch (type) {
-      case 'document':
-        return `# ${props.title || ''}\n\n${childrenMd}`;
+  // Other mdast nodes need to be wrapped in a Root first
+  if (element?.type) return toMarkdown({ type: 'root', children: [element] } as Root);
 
-      case 'h1':
-        return `# ${childrenMd}\n\n`;
+  // Arrays of nodes also get wrapped in a Root
+  if (Array.isArray(element)) return toMarkdown({ type: 'root', children: element.filter(e => e?.type) } as Root);
 
-      case 'h2':
-        return `## ${childrenMd}\n\n`;
-
-      case 'h3':
-        return `### ${childrenMd}\n\n`;
-
-      case 'h4':
-        return `#### ${childrenMd}\n\n`;
-
-      case 'p':
-        return `${childrenMd}\n\n`;
-
-      case 'ul':
-        return `${childrenMd}\n`;
-
-      case 'li':
-        return `- ${childrenMd}\n`;
-
-      case 'strong':
-        return `**${childrenMd}**`;
-
-      case 'hr':
-        return `---\n\n`;
-
-      case 'fragment':
-        return childrenMd;
-
-      default:
-        return childrenMd;
-    }
-  }
-
-  return '';
+  // Fallback for primitives
+  return String(element || '');
 }

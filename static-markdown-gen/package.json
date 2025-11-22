@@ -1,5 +1,12 @@
 {
   "name": "static-markdown-gen",
   "version": "1.0.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "mdast-util-to-markdown": "2.1.2"
+  },
+  "devDependencies": {
+    "@types/mdast": "4.0.4",
+    "@types/node": "24.10.1"
+  }
 }
