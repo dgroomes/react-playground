@@ -62,13 +62,6 @@ Static site generation (SSG) in pure React.
 See the README in [static-site-gen/](static-site-gen/).
 
 
-## `static-markdown-gen/`
-
-Generate Markdown from JSX using a custom renderer.
-
-See the README in [static-markdown-gen/](static-markdown-gen/).
-
-
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
